@@ -6,7 +6,7 @@
     "location": "Low to moderate indirect light",
     "watering": "Water sparingly, allowing soil to dry out between waterings.",
     "care": "Thrives in well-draining soil, avoid overwatering as it can lead to root rot.",
-    "picture": ""
+    "picture": "https://thewateringcan.ca/wp-content/uploads/2021/03/6-Laurentii-snake-scaled-1-scaled-scaled.jpg"
   },
   {
     "id": "2",
@@ -15,7 +15,7 @@
     "location": "Low to bright indirect light",
     "watering": "Water sparingly, allowing soil to dry out completely between waterings.",
     "care": "Prefers well-draining soil, avoid overwatering to prevent root rot.",
-    "picture": ""
+    "picture": "https://unlimitedgreens.com/cdn/shop/files/ZZ-plant-Large-Front.jpg?v=1684550412"
   },
   {
     "id": "3",
@@ -24,7 +24,7 @@
     "location": "Bright indirect light",
     "watering": "Keep soil consistently moist, but not soggy.",
     "care": "Regularly remove brown tips and dead leaves, propagate easily from offsets.",
-    "picture": ""
+    "picture": "https://cdn11.bigcommerce.com/s-tf2vn6/images/stencil/1280x1280/products/1164/3545/spider-plant-res-grey__33683.1691515154.jpg?c=2"
   },
   {
     "id": "4",
@@ -33,7 +33,7 @@
     "location": "Low to moderate indirect light",
     "watering": "Water when the soil surface is dry, but avoid overwatering.",
     "care": "Keep leaves dust-free, occasional misting can increase humidity levels.",
-    "picture": ""
+    "picture": "https://d2rxt25e475whq.cloudfront.net/wp-content/uploads/2023/06/25230946/Product-Card-Senville-Mini-Split-AC-7-1024x1024.jpg.webp"
   },
   {
     "id": "5",
@@ -42,7 +42,7 @@
     "location": "Low to bright indirect light",
     "watering": "Allow soil to dry out between waterings, but don't let it dry completely.",
     "care": "Prune regularly to encourage bushier growth, propagate easily from stem cuttings.",
-    "picture": ""
+    "picture": "https://www.provenwinners.com/sites/provenwinners.com/files/imagecache/500x500/ifa_upload/epipremnum_aureum_pothos_beautiful_hawaiian_pothos_mono_02.jpg"
   },
   {
     "id": "6",
@@ -51,7 +51,7 @@
     "location": "Direct sunlight",
     "watering": "Water deeply but infrequently, allowing soil to dry out between waterings.",
     "care": "Ensure good drainage to prevent root rot, avoid getting water on the leaves to prevent rot.",
-    "picture": ""
+    "picture": "https://www.plantura.garden/wp-content/uploads/2019/08/echte-aloe-vera-1024x683.jpg?x71105"
   },
   {
     "id": "7",
@@ -60,7 +60,7 @@
     "location": "Low to moderate indirect light",
     "watering": "Water moderately, allowing the top inch of soil to dry out between waterings.",
     "care": "Wipe leaves with a damp cloth to keep them clean and shiny, avoid sudden temperature changes.",
-    "picture": ""
+    "picture": "https://abeautifulmess.com/wp-content/uploads/2023/06/rubbertree-1.jpg"
   },
   {
     "id": "8",
@@ -69,7 +69,7 @@
     "location": "Bright indirect light",
     "watering": "Water regularly, keeping soil consistently moist but not waterlogged.",
     "care": "Provide support for climbing vines, mist leaves regularly to increase humidity.",
-    "picture": ""
+    "picture": "https://foliagedreams.com/cdn/shop/products/monstera-deliciosa-fensterblatt-plant-xl-korb-braun-41930894803211.jpg?v=1692124584&width=720"
   },
   {
     "id": "9",
@@ -78,7 +78,7 @@
     "location": "Bright indirect light",
     "watering": "Water when the top inch of soil is dry, avoid overwatering as it can lead to root rot.",
     "care": "Rotate plant regularly to ensure even growth, wipe leaves to keep them dust-free.",
-    "picture": ""
+    "picture": "https://www.brighterblooms.com/cdn/shop/products/Bambino_FIddleLeafFIg_BB_600x600_5bcae5fe-8397-4d12-8c99-c1a5d23720c3_grande.jpg?v=1641843208"
   },
   {
     "id": "10",
@@ -87,7 +87,7 @@
     "location": "Low to moderate indirect light",
     "watering": "Water when the top inch of soil is dry, avoid overwatering.",
     "care": "Prune to control size and shape, propagate easily from stem cuttings.",
-    "picture": ""
+    "picture": "https://foliagedreams.com/cdn/shop/products/philodendron-brandtianum-plant-41929253617931.jpg?v=1692125093&width=1080"
   },
   {
     "id": "11",
@@ -96,7 +96,7 @@
     "location": "Bright indirect light",
     "watering": "Water when the top inch of soil is dry, ensuring good drainage.",
     "care": "Rotate regularly to prevent leaning, propagate easily from offshoots.",
-    "picture": ""
+    "picture": "https://plantworldlondon.com/wp-content/uploads/2021/06/Pilea-Peperomioides-CHINESE-MONEY-PLANT-1.jpg"
   },
   {
     "id": "12",
@@ -105,7 +105,7 @@
     "location": "Low to moderate indirect light",
     "watering": "Water moderately, allowing the soil to partially dry out between waterings.",
     "care": "Mist regularly to increase humidity, avoid exposure to drafts.",
-    "picture": ""
+    "picture": "https://d3gkbidvk2xej.cloudfront.net/images/products/986c41ca-5396-4243-993b-356338fabbad/s/parlor-palm.jpeg?version=1648459547.17390019800"
   },
   {
     "id": "13",
@@ -114,6 +114,6 @@
     "location": "Low to moderate indirect light",
     "watering": "Keep soil consistently moist, but not waterlogged.",
     "care": "Prune regularly to maintain shape",
-    "picture": ""
+    "picture": "https://www.reggys.co.uk/cdn/shop/products/39.jpg?v=1680784464&width=1445"
   }
 ]

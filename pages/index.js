@@ -16,7 +16,6 @@ const StyledButton = styled.button`
 `;
 
 export default function Homepage() {
-  console.log(plants);
   return (
     <>
       <h1>PlantWorld</h1>
@@ -25,7 +24,7 @@ export default function Homepage() {
         <input type="text" id="title" name="title" required />
 
         <label htmlFor="description">Description </label>
-        <input type="description" id="description" name="description" />
+        <input type="text" id="description" name="description" />
 
         <label htmlFor="location">Location </label>
         <input type="text" id="location" name="location" />
@@ -34,19 +33,19 @@ export default function Homepage() {
         <input type="text" id="watering" name="watering" />
 
         <label htmlFor="care">Care </label>
-        <input type="care" id="care" name="care" />
+        <input type="text" id="care" name="care" />
 
         <label htmlFor="picture">Picture </label>
-        <input type="picture" id="picture" name="picture" />
+        <input type="link" id="picture" name="picture" />
 
         <StyledButton type="submit">Save Plant</StyledButton>
         <StyledButton type="button">Cancel</StyledButton>
       </StyledForm>
 
-      <div>
+      <>
         <h2>Initial Plants</h2>
         <PlantList plants={plants} />
-      </div>
+      </>
     </>
   );
 }

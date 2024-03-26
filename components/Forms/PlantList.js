@@ -12,7 +12,7 @@ export default function PlantList({ plants }) {
             <p>{plant.location}</p>
             <p>{plant.watering}</p>
             <p>{plant.care}</p>
-            <p>{plant.picture}</p>
+            <img src={plant.picture} width={100} height={149} />
           </li>
         ))}
       </ul>
