@@ -3,7 +3,6 @@ import plants from "../../lib/plants.json";
 export default function PlantList({ plants }) {
   return (
     <>
-      <h1>Plant List</h1>
       <ul>
         {plants.map((plant) => (
           <li key={plant.id}>
