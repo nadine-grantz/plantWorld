@@ -2,6 +2,7 @@ import styled from "styled-components";
 import initialPlantsExamples from "../lib/plants.js";
 import React from "react";
 import PlantList from "@/components/Forms/AddOwnPlantForm.js";
+
 const StyledForm = styled.form`
   display: grid;
   gap: 1rem;
@@ -15,7 +16,7 @@ const StyledButton = styled.button`
   text-transform: uppercase;
 `;
 
-export default function Homepage() {
+export default function Homepage(PlantList) {
   return (
     <>
       <h1>PlantWorld</h1>
@@ -44,7 +45,7 @@ export default function Homepage() {
 
       <div>
         <h2>Initial Plants</h2>
-        <PflanzenListe initialPlantsExamples={initialPlantsExamples} />
+        <PlantList />
       </div>
     </>
   );

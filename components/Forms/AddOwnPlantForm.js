@@ -2,16 +2,20 @@ import initialPlantsExamples from "../lib/plants.js";
 
 export default function PlantList() {
   return (
-    <div>
-      <h1>Pflanzen Liste</h1>
+    <>
+      <h1>Plant List</h1>
       <ul>
-        {plants.map((plant) => (
+        {initialPlantsExamples.map((plant) => (
           <li key={plant.id}>
-            <h2>{plant.name}</h2>
+            <h2>{plant.title}</h2>
             <p>{plant.description}</p>
+            <p>{plant.location}</p>
+            <p>{plant.watering}</p>
+            <p>{plant.care}</p>
+            <p>{plant.picture}</p>
           </li>
         ))}
       </ul>
-    </div>
+    </>
   );
 }
