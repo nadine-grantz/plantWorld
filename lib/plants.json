@@ -1,0 +1,119 @@
+[
+  {
+    "id": "1",
+    "title": "Snake Plant",
+    "description": "The Snake Plant, also known as Mother-in-Law's Tongue, is a hardy indoor plant with long, upright leaves. It's perfect for low light conditions and requires minimal watering.",
+    "location": "Low to moderate indirect light",
+    "watering": "Water sparingly, allowing soil to dry out between waterings.",
+    "care": "Thrives in well-draining soil, avoid overwatering as it can lead to root rot.",
+    "picture": ""
+  },
+  {
+    "id": "2",
+    "title": "ZZ Plant",
+    "description": "The ZZ Plant is a popular choice for indoor spaces due to its glossy, dark green leaves and low maintenance requirements. It can tolerate low light conditions and infrequent watering.",
+    "location": "Low to bright indirect light",
+    "watering": "Water sparingly, allowing soil to dry out completely between waterings.",
+    "care": "Prefers well-draining soil, avoid overwatering to prevent root rot.",
+    "picture": ""
+  },
+  {
+    "id": "3",
+    "title": "Spider Plant",
+    "description": "The Spider Plant is characterized by its long, arching leaves and small white flowers. It thrives in bright, indirect light and is known for its air-purifying qualities.",
+    "location": "Bright indirect light",
+    "watering": "Keep soil consistently moist, but not soggy.",
+    "care": "Regularly remove brown tips and dead leaves, propagate easily from offsets.",
+    "picture": ""
+  },
+  {
+    "id": "4",
+    "title": "Peace Lily",
+    "description": "The Peace Lily is a classic indoor plant with elegant white flowers and glossy green leaves. It prefers shade and can tolerate low light conditions, making it ideal for offices or bedrooms.",
+    "location": "Low to moderate indirect light",
+    "watering": "Water when the soil surface is dry, but avoid overwatering.",
+    "care": "Keep leaves dust-free, occasional misting can increase humidity levels.",
+    "picture": ""
+  },
+  {
+    "id": "5",
+    "title": "Pothos",
+    "description": "Pothos, also known as Devil's Ivy, is a versatile indoor plant with heart-shaped leaves. It can thrive in a variety of light conditions and is known for its trailing growth habit.",
+    "location": "Low to bright indirect light",
+    "watering": "Allow soil to dry out between waterings, but don't let it dry completely.",
+    "care": "Prune regularly to encourage bushier growth, propagate easily from stem cuttings.",
+    "picture": ""
+  },
+  {
+    "id": "6",
+    "title": "Aloe Vera",
+    "description": "Aloe Vera is a succulent plant known for its medicinal properties and spiky, fleshy leaves. It thrives in bright sunlight and requires minimal watering, making it perfect for sunny windowsills.",
+    "location": "Direct sunlight",
+    "watering": "Water deeply but infrequently, allowing soil to dry out between waterings.",
+    "care": "Ensure good drainage to prevent root rot, avoid getting water on the leaves to prevent rot.",
+    "picture": ""
+  },
+  {
+    "id": "7",
+    "title": "Rubber Plant",
+    "description": "The Rubber Plant is a sturdy indoor tree with glossy, deep green leaves. It can tolerate low light conditions and prefers moderate humidity levels, making it suitable for various indoor environments.",
+    "location": "Low to moderate indirect light",
+    "watering": "Water moderately, allowing the top inch of soil to dry out between waterings.",
+    "care": "Wipe leaves with a damp cloth to keep them clean and shiny, avoid sudden temperature changes.",
+    "picture": ""
+  },
+  {
+    "id": "8",
+    "title": "Monstera Deliciosa",
+    "description": "The Monstera Deliciosa, also known as the Swiss Cheese Plant, is a tropical vine with large, fenestrated leaves. It thrives in bright, indirect light and high humidity.",
+    "location": "Bright indirect light",
+    "watering": "Water regularly, keeping soil consistently moist but not waterlogged.",
+    "care": "Provide support for climbing vines, mist leaves regularly to increase humidity.",
+    "picture": ""
+  },
+  {
+    "id": "9",
+    "title": "Fiddle Leaf Fig",
+    "description": "The Fiddle Leaf Fig is a popular choice for indoor decor with its large, violin-shaped leaves. It prefers bright, indirect light and consistent watering to thrive.",
+    "location": "Bright indirect light",
+    "watering": "Water when the top inch of soil is dry, avoid overwatering as it can lead to root rot.",
+    "care": "Rotate plant regularly to ensure even growth, wipe leaves to keep them dust-free.",
+    "picture": ""
+  },
+  {
+    "id": "10",
+    "title": "Philodendron",
+    "description": "Philodendrons are a diverse group of indoor plants known for their heart-shaped leaves and trailing growth habit. They thrive in low to moderate light conditions and require minimal care.",
+    "location": "Low to moderate indirect light",
+    "watering": "Water when the top inch of soil is dry, avoid overwatering.",
+    "care": "Prune to control size and shape, propagate easily from stem cuttings.",
+    "picture": ""
+  },
+  {
+    "id": "11",
+    "title": "Chinese Money Plant",
+    "description": "The Chinese Money Plant, also known as Pilea, is a charming plant with round, coin-like leaves. It prefers bright, indirect light and regular watering to thrive.",
+    "location": "Bright indirect light",
+    "watering": "Water when the top inch of soil is dry, ensuring good drainage.",
+    "care": "Rotate regularly to prevent leaning, propagate easily from offshoots.",
+    "picture": ""
+  },
+  {
+    "id": "12",
+    "title": "Parlor Palm",
+    "description": "The Parlor Palm is a compact indoor palm with delicate fronds. It thrives in low light conditions and prefers consistently moist soil.",
+    "location": "Low to moderate indirect light",
+    "watering": "Water moderately, allowing the soil to partially dry out between waterings.",
+    "care": "Mist regularly to increase humidity, avoid exposure to drafts.",
+    "picture": ""
+  },
+  {
+    "id": "13",
+    "title": "English Ivy",
+    "description": "English Ivy is a versatile vine with lush, green foliage that can be grown indoors or outdoors. It thrives in cool temperatures and can tolerate low light conditions.",
+    "location": "Low to moderate indirect light",
+    "watering": "Keep soil consistently moist, but not waterlogged.",
+    "care": "Prune regularly to maintain shape",
+    "picture": ""
+  }
+]

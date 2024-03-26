@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import initialPlantsExamples from "../lib/plants.js";
-import React from "react";
-import PlantList from "@/components/Forms/AddOwnPlantForm.js";
+import plants from "../lib/plants.json";
+import PlantList from "@/components/Forms/PlantList.js";
 
 const StyledForm = styled.form`
   display: grid;
@@ -16,7 +15,8 @@ const StyledButton = styled.button`
   text-transform: uppercase;
 `;
 
-export default function Homepage(PlantList) {
+export default function Homepage() {
+  console.log(plants);
   return (
     <>
       <h1>PlantWorld</h1>
@@ -28,10 +28,10 @@ export default function Homepage(PlantList) {
         <input type="description" id="description" name="description" />
 
         <label htmlFor="location">Location </label>
-        <input type="location" id="location" name="location" />
+        <input type="text" id="location" name="location" />
 
         <label htmlFor="watering">Watering Plants </label>
-        <input type="watering" id="watering" name="watering" />
+        <input type="text" id="watering" name="watering" />
 
         <label htmlFor="care">Care </label>
         <input type="care" id="care" name="care" />
@@ -45,7 +45,7 @@ export default function Homepage(PlantList) {
 
       <div>
         <h2>Initial Plants</h2>
-        <PlantList />
+        <PlantList plants={plants} />
       </div>
     </>
   );

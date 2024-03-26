@@ -1,11 +1,11 @@
-import initialPlantsExamples from "../lib/plants.js";
+import plants from "../../lib/plants.json";
 
-export default function PlantList() {
+export default function PlantList({ plants }) {
   return (
     <>
       <h1>Plant List</h1>
       <ul>
-        {initialPlantsExamples.map((plant) => (
+        {plants.map((plant) => (
           <li key={plant.id}>
             <h2>{plant.title}</h2>
             <p>{plant.description}</p>
