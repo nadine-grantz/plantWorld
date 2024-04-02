@@ -1,105 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
 
-import Link from "next/link";
-
-export const NavigationContainer = styled.nav`
-  position: absolute;
-  top: 0;
-  left: 0;
-`;
-
-export const NavIcon = styled.div`
-  position: absolute;
-  top: 1.125rem;
-  left: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  width: 36px;
-  aspect-ratio: 1;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: var(--border-radius_square-button);
-  padding: 9px 7px;
-  cursor: pointer;
-  z-index: 3;
-
-  span {
-    height: 3px;
-    background-color: var(--color_white);
-    border-radius: 3px;
-    transition: var(--transition_button);
-
-    &:nth-child(1) {
-      transform: ${({ $isOpen }) =>
-        $isOpen ? "rotate(45deg) translate(5px, 5px)" : "rotate(0)"};
-    }
-
-    &:nth-child(2) {
-      opacity: ${({ $isOpen }) => ($isOpen ? 0 : 1)};
-    }
-
-    &:nth-child(3) {
-      transform: ${({ $isOpen }) =>
-        $isOpen ? "rotate(-45deg) translate(5px, -5px)" : "rotate(0)"};
-    }
-  }
-`;
-
-export const NavMenu = styled.div`
-  position: fixed;
-  top: 0;
-  left: ${({ $isOpen }) => ($isOpen ? "0" : "calc(-100% - 1rem)")};
-  width: 100vw;
-  height: 100vh;
-  background-color: var(--color_midnight);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: left 0.3s;
-  z-index: 2;
-  overflow: hidden;
-
-  ul {
-    list-style: none;
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    z-index: 2;
-  }
-`;
-
-export const NavLink = styled(Link)`
-  display: block;
-  width: 100%;
-  padding: 1rem;
-  font: var(--font_heading-3);
-  color: var(--color_white);
-  text-decoration: none;
-  text-transform: uppercase;
-  text-align: center;
-
-  &:hover {
-    background-color: rgba(255, 255, 255, 0.04);
-  }
-`;
-export const NavButton = styled.button`
-  display: block;
-  width: 100%;
-  padding: 1rem;
-  font: var(--font_heading-3);
-  color: var(--color_white);
-  background-color: var(--color_midnight);
-  border: none;
-  cursor: pointer;
-  text-transform: uppercase;
-  text-align: center;
-
-  &:hover {
-    background-color: rgba(255, 255, 255, 0.04);
-  }
-`;
-
 export default function Navigation() {
   const [isNavigationVisible, setVisibleNavigation] = useState(false);
 
@@ -113,30 +14,30 @@ export default function Navigation() {
 
   return (
     <>
-      <NavigationContainer>
-        <NavButton onClick={() => toggleNavigation()}>Navigation</NavButton>
-        <NavMenu $isOpen={isNavigationVisible}>
+      <nav>
+        <button onClick={toggleNavigation}>Navigation</button>
+        {isNavigationVisible && (
           <ul>
             <li>
-              <NavLink href="/" onClick={handleLinkClick}>
+              <a href="/" onClick={handleLinkClick}>
                 Home
-              </NavLink>
+              </a>
             </li>
 
             <li>
-              <NavLink href="/add-own-plant" onClick={handleLinkClick}>
+              <a href="/add-own-plant" onClick={handleLinkClick}>
                 AddOwnPlants
-              </NavLink>
+              </a>
             </li>
 
             <li>
-              <NavLink href="/my-plants" onClick={handleLinkClick}>
+              <a href="/my-plants" onClick={handleLinkClick}>
                 My Plants
-              </NavLink>
+              </a>
             </li>
           </ul>
-        </NavMenu>
-      </NavigationContainer>
+        )}
+      </nav>
     </>
   );
 }
