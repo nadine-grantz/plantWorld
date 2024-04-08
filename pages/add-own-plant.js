@@ -6,7 +6,7 @@ import styled from "styled-components";
 export default function AddOwnPlants({ plants }) {
   return (
     <>
-      <h1>Add my Plants</h1>
+      <h1>Add my Plants / Page</h1>
     </>
   );
 }
