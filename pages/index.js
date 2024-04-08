@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import plants from "../lib/plants.json";
 import PlantList from "@/components/Forms/PlantList.js";
+import Link from "next/link";
 
 const StyledForm = styled.form`
   display: grid;
@@ -48,6 +49,15 @@ const Wrapper = styled.div`
 export default function Homepage() {
   return (
     <>
+      {/* <h1>Plants</h1>
+      <ul>
+        <Link href="/plant-details">Go to see some selected plants</Link>
+        <img
+          src="https://images.unsplash.com/photo-1515150144380-bca9f1650ed9?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Z2FyZGVufGVufDB8fDB8fHww"
+          alt="" width={100} height={149}
+        />
+      </ul> */}
+
       <StyledHeading>PlantWorld</StyledHeading>
       <Wrapper>
         <StyledForm>
