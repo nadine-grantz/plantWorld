@@ -28,18 +28,6 @@ const ChangeBar3 = styled(Bar)`
     isOpen ? "translate(0, -11px) rotate(45deg)" : "none"};
 `;
 
-// Example for string interpolation
-
-// const plant = "Bogenhanf";
-
-// const stringConcatination = "I love " + plant + ", in my room!";
-
-// const withTemplateString = `Hello ${plant}, good to see you!`;
-
-// const greeting = `I love ${
-//   plant !== null ? plant : "mysterious plant"
-// }, in my room!`;
-
 export default function Navigation() {
   const [isNavigationVisible, setVisibleNavigation] = useState(false);
 
@@ -69,13 +57,13 @@ export default function Navigation() {
 
             <li>
               <a href="/add-own-plant" onClick={handleLinkClick}>
-                AddOwnPlants
+                Add my own Plant
               </a>
             </li>
 
             <li>
-              <a href="/my-plants" onClick={handleLinkClick}>
-                My Plants
+              <a href="/my-favorite-plants" onClick={handleLinkClick}>
+                My favorite Plant
               </a>
             </li>
           </ul>

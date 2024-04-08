@@ -2,8 +2,9 @@
 
 import { useRouter } from "next/router";
 import plants from "../../lib/plants.json";
+import PlantDetails from "../../components/PlantDetails/plantDetails";
 
-export default function PlantDetails() {
+export default function Details() {
   const router = useRouter();
   const { id } = router.query;
   const plant = plants.find((plant) => plant.id === id);
@@ -13,13 +14,8 @@ export default function PlantDetails() {
   }
 
   return (
-    <div>
-      <h1>{plant.title}</h1>
-      <p>{plant.description}</p>
-      <p>{plant.location}</p>
-      <p>{plant.watering}</p>
-      <p>{plant.care}</p>
-      <img src={plant.picture} alt={plant.title} />
-    </div>
+    <>
+      <PlantDetails plant={plant} />
+    </>
   );
 }
