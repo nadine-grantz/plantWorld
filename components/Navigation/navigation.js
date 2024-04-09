@@ -15,17 +15,17 @@ const Bar = styled.div`
 `;
 
 const ChangeBar1 = styled(Bar)`
-  transform: ${({ isOpen }) =>
-    isOpen ? "translate(0, 11px) rotate(-45deg)" : "none"};
+  transform: ${({ $isOpen }) =>
+    $isOpen ? "translate(0, 11px) rotate(-45deg)" : "none"};
 `;
 
 const ChangeBar2 = styled(Bar)`
-  opacity: ${({ isOpen }) => (isOpen ? "0" : "1")};
+  opacity: ${({ $isOpen }) => ($isOpen ? "0" : "1")};
 `;
 
 const ChangeBar3 = styled(Bar)`
-  transform: ${({ isOpen }) =>
-    isOpen ? "translate(0, -11px) rotate(45deg)" : "none"};
+  transform: ${({ $isOpen }) =>
+    $isOpen ? "translate(0, -11px) rotate(45deg)" : "none"};
 `;
 
 export default function Navigation() {
@@ -43,9 +43,9 @@ export default function Navigation() {
     <>
       <nav>
         <Container onClick={toggleNavigation}>
-          <ChangeBar1 isOpen={isNavigationVisible} />
-          <ChangeBar2 isOpen={isNavigationVisible} />
-          <ChangeBar3 isOpen={isNavigationVisible} />
+          <ChangeBar1 $isOpen={isNavigationVisible} />
+          <ChangeBar2 $isOpen={isNavigationVisible} />
+          <ChangeBar3 $isOpen={isNavigationVisible} />
         </Container>
         {isNavigationVisible && (
           <ul>
