@@ -1,30 +1,45 @@
+// import GlobalStyle from "../styles";
+// import Navigation from "@/components/Navigation/navigation";
+// import plants from "../lib/plants.json";
+// // import useLocalStorageState from "use-local-storage-state";
+
+// export default function App({ Component, pageProps }) {
+//   function handleToogleFavoritePlant() {}
+
+//   return (
+//     <>
+//       <GlobalStyle />
+//       <Navigation />
+//       <Component
+//         {...pageProps}
+//         plants={plants}
+//         // handleToggleBookmark={handleToggleBookmark}
+//       />
+//     </>
+//   );
+// }
+
+// ---------------------------------
+// In _app.js
+import React, { useState } from "react";
 import GlobalStyle from "../styles";
 import Navigation from "@/components/Navigation/navigation";
 import plants from "../lib/plants.json";
-import useLocalStorageState from "use-local-storage-state";
+import MyFavoritePlants from "./my-favorite-plants";
 
 export default function App({ Component, pageProps }) {
-  const [plantsInfo, setPlantsInfo] = useLocalStorageState("plantsInfo", []);
+  const [favoritePlants, setFavoritePlants] = useState([]);
 
-  // Überprüfe, ob plantsInfo undefined ist und setze es auf ein leeres Array, falls erforderlich
-  if (typeof plantsInfo === "undefined") {
-    setPlantsInfo([]);
-  }
-
-  function handleToggleBookmark(id) {
-    const currentPlant = plantsInfo.find((plant) => plant.id === id);
-    if (currentPlant) {
-      setPlantsInfo(
-        plantsInfo.map((plantInfo) =>
-          plantInfo.id === id
-            ? { ...plantInfo, isBookmarked: !plantInfo.isBookmarked }
-            : plantInfo
-        )
-      );
+  const handleToggleFavoritePlant = (plant) => {
+    const index = favoritePlants.findIndex((p) => p.id === plant.id);
+    if (index === -1) {
+      setFavoritePlants([...favoritePlants, plant]);
     } else {
-      setPlantsInfo([...plantsInfo, { id, isBookmarked: true }]);
+      const updatedFavorites = [...favoritePlants];
+      updatedFavorites.splice(index, 1);
+      setFavoritePlants(updatedFavorites);
     }
-  }
+  };
 
   return (
     <>
@@ -33,8 +48,9 @@ export default function App({ Component, pageProps }) {
       <Component
         {...pageProps}
         plants={plants}
-        handleToggleBookmark={handleToggleBookmark}
+        handleToggleFavoritePlant={handleToggleFavoritePlant}
       />
+      <MyFavoritePlants favoritePlants={favoritePlants} />
     </>
   );
 }
