@@ -4,7 +4,6 @@ export default function PlantDetails({ plant }) {
   return (
     <>
       <h1>{title}</h1>
-
       <ul>
         <li>{description}</li>
         <li>{location}</li>
