@@ -1,13 +1,16 @@
-export default function PlantDetails({ plants }) {
+export default function PlantDetails({ plant }) {
+  const { title, description, location, watering, care, picture } = plant;
+
   return (
     <>
-      <h1>{plant.title}</h1>
+      <h1>{title}</h1>
+
       <ul>
-        <li>{plant.description}</li>
-        <li>{plant.location}</li>
-        <li>{plant.watering}</li>
-        <li>{plant.care}</li>
-        <img src={plant.picture} alt={plant.title} width={100} height={149} />
+        <li>{description}</li>
+        <li>{location}</li>
+        <li>{watering}</li>
+        <li>{care}</li>
+        <img src={picture} alt={title} width={100} height={149} />
       </ul>
     </>
   );

@@ -8,9 +8,9 @@ export default function Homepage({ plants }) {
       <ul>
         {plants.map((plant) => (
           //key identifiziert
-          <li key={plant.title}>
+          <li key={plant.id}>
             <h2>{plant.title}</h2>
-            <Link href={`/plant-details/${plant.title}`}>
+            <Link href={`/plant-details/${plant.slug}`}>
               <img src={plant.picture} width={100} height={149} />
             </Link>
           </li>
