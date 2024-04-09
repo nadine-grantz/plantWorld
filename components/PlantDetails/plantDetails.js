@@ -1,14 +1,14 @@
-export default function PlantDetails({ plant }) {
+export default function PlantDetails({ plants }) {
   return (
     <>
-      <div>
-        <h1>{plant.title}</h1>
-        <p>{plant.description}</p>
-        <p>{plant.location}</p>
-        <p>{plant.watering}</p>
-        <p>{plant.care}</p>
+      <h1>{plant.title}</h1>
+      <ul>
+        <li>{plant.description}</li>
+        <li>{plant.location}</li>
+        <li>{plant.watering}</li>
+        <li>{plant.care}</li>
         <img src={plant.picture} alt={plant.title} width={100} height={149} />
-      </div>
+      </ul>
     </>
   );
 }

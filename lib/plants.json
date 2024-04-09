@@ -1,17 +1,16 @@
 [
   {
     "id": "1",
-    "title": "Snake Plant",
+    "title": "Snake-Plant",
     "description": "The Snake Plant, also known as Mother-in-Law's Tongue, is a hardy indoor plant with long, upright leaves. It's perfect for low light conditions and requires minimal watering.",
     "location": "Low to moderate indirect light",
     "watering": "Water sparingly, allowing soil to dry out between waterings.",
     "care": "Thrives in well-draining soil, avoid overwatering as it can lead to root rot.",
-    "picture": "https://images.unsplash.com/photo-1593482892540-73c9199d8949?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "Favorite": false
+    "picture": "https://images.unsplash.com/photo-1593482892540-73c9199d8949?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     "id": "2",
-    "title": "ZZ Plant",
+    "title": "ZZ-Plant",
     "description": "The ZZ Plant is a popular choice for indoor spaces due to its glossy, dark green leaves and low maintenance requirements. It can tolerate low light conditions and infrequent watering.",
     "location": "Low to bright indirect light",
     "watering": "Water sparingly, allowing soil to dry out completely between waterings.",
