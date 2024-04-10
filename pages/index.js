@@ -1,15 +1,22 @@
 import React from "react";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Homepage({ plants }) {
-  // let favoritePlantArray = [];
+  // const favoritePlantArray = [];
+  // function handleAddFavoritePlant(id) {
+  //   // const favoritePlants = plants.filter((plant) => plant.id === id);
+  //   console.log("my-favorite-plants:", favoritePlants);
+  //   return favoritePlants;
+  // }
 
-  function handleAddFavoritePlant(id) {
-    const favoritePlants = plants.filter((plant) => plant.id === id);
-    console.log("my-favorite-plants:", favoritePlants);
-    return favoritePlants;
+  const [favoritePlants, setFavoritePlants] = useState([]);
+
+  function addFavoritePlant(fav) {
+    setFavoritePlants([...favoritePlants, fav]);
   }
 
+  console.log("favoritePlants: ", favoritePlants);
   return (
     <>
       <h2>Welcome to your PlantWorld</h2>
@@ -25,7 +32,9 @@ export default function Homepage({ plants }) {
                 alt={plant.title}
               />
             </Link>
-            <button onClick={handleAddFavoritePlant}>Favorite</button>
+            <button onClick={(event) => addFavoritePlant(plant)}>
+              Favorite
+            </button>
           </li>
         ))}
       </ul>
