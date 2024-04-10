@@ -1,20 +1,27 @@
-// import styled from "styled-components";
-
-// // hier sollen alle pflanzen dargestellt werden die einen bookmark haben
-
-// export default function MyPlants() {
-//   return (
-//     <>
-//       <h1>My Plants / Page</h1>
-//     </>
-//   );
-// }
-
-// In my-favorite-plants.js
-
 import React from "react";
+// import { useState } from "react";
 
-export default function MyFavoritePlants({ favoritePlants }) {
+// const initialBooksInfo = books.map((book) => {
+//   return { id: book.id, isBookmarked: false, isAlreadyRead: false };
+// });
+
+export default function MyFavoritePlants({ plants }) {
+  // const [plantsInfo, setPlantsInfo] = useState[""];
+
+  // function handleToggleBookmark(id) {
+  //   const currentPlant = plantsInfo.find((plant) => plant.id === id);
+  //   if (currentPlant) {
+  //     setPlantsInfo(
+  //       plantsInfo.map((plantInfo) =>
+  //         plantInfo.id === id
+  //           ? { ...plantInfo, isBookmarked: !plantInfo.isBookmarked }
+  //           : plantInfo
+  //       )
+  //     );
+  //   } else {
+  //     setPlantsInfo([...plantsInfo, { id, isBookmarked: true }]);
+  //   }
+  // }
   return (
     <>
       <h1>My Favorite Plants </h1>
