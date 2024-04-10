@@ -1,30 +1,26 @@
 import React from "react";
-// import { useState } from "react";
+import Link from "next/link";
 
-// const initialBooksInfo = books.map((book) => {
-//   return { id: book.id, isBookmarked: false, isAlreadyRead: false };
-// });
-
-export default function MyFavoritePlants({ plants }) {
-  // const [plantsInfo, setPlantsInfo] = useState[""];
-
-  // function handleToggleBookmark(id) {
-  //   const currentPlant = plantsInfo.find((plant) => plant.id === id);
-  //   if (currentPlant) {
-  //     setPlantsInfo(
-  //       plantsInfo.map((plantInfo) =>
-  //         plantInfo.id === id
-  //           ? { ...plantInfo, isBookmarked: !plantInfo.isBookmarked }
-  //           : plantInfo
-  //       )
-  //     );
-  //   } else {
-  //     setPlantsInfo([...plantsInfo, { id, isBookmarked: true }]);
-  //   }
-  // }
+export default function MyFavoritePlants({ favoritePlants }) {
+  console.log("My favorite Plants Page: ", favoritePlants);
   return (
     <>
       <h1>My Favorite Plants </h1>
+      <ul>
+        {favoritePlants.map((plant) => (
+          <li key={plant.id}>
+            <h2>{plant.title}</h2>
+            <Link href={`/plant-details/${plant.slug}`}>
+              <img
+                src={plant.picture}
+                width={100}
+                height={149}
+                alt={plant.title}
+              />
+            </Link>
+          </li>
+        ))}
+      </ul>
     </>
   );
 }

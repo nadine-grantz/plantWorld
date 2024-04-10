@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
+import Link from "next/link";
 
 const Container = styled.div`
   display: inline-block;
@@ -50,21 +51,21 @@ export default function Navigation() {
         {isNavigationVisible && (
           <ul>
             <li>
-              <a href="/" onClick={handleLinkClick}>
+              <Link href="/" onClick={handleLinkClick}>
                 Home
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a href="/add-own-plant" onClick={handleLinkClick}>
+              <Link href="/add-own-plant" onClick={handleLinkClick}>
                 Add my own Plant
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a href="/my-favorite-plants" onClick={handleLinkClick}>
+              <Link href="/my-favorite-plants" onClick={handleLinkClick}>
                 My favorite Plant
-              </a>
+              </Link>
             </li>
           </ul>
         )}

@@ -1,16 +1,28 @@
 import React from "react";
 import Link from "next/link";
-import { useState } from "react";
 
-export default function Homepage({ plants }) {
-  const [favoritePlants, setFavoritePlants] = useState([]);
-
-  function addFavoritePlant(fav) {
-    setFavoritePlants([...favoritePlants, fav]);
+export default function Homepage({
+  plants,
+  setFavoritePlantsState,
+  favoritePlants,
+}) {
+  function isPlantInFavoritePlants(plant) {
+    const isAlreadyFavorite = favoritePlants.some(
+      (favorite) => favorite.id === plant.id
+    );
+    return isAlreadyFavorite;
   }
 
-  console.log("favoritePlants: ", favoritePlants); // fire the onClick event => add this plant to the favoritePlants
-  // console.log("plant: ", plants); every plant is in an [{}] in the console, 13 {}
+  function handleAddFavoritePlant(maybeFavPlant) {
+    const isAlreadyFavorite = isPlantInFavoritePlants(maybeFavPlant);
+
+    if (!isAlreadyFavorite) {
+      setFavoritePlantsState([...favoritePlants, maybeFavPlant]);
+    }
+  }
+
+  console.log("favoritePlants: ", favoritePlants);
+
   return (
     <>
       <h2>Welcome to your PlantWorld</h2>
@@ -26,7 +38,10 @@ export default function Homepage({ plants }) {
                 alt={plant.title}
               />
             </Link>
-            <button onClick={(event) => addFavoritePlant(plant)}>
+            <button
+              disabled={isPlantInFavoritePlants(plant)}
+              onClick={(event) => handleAddFavoritePlant(plant)}
+            >
               Favorite
             </button>
           </li>
@@ -35,3 +50,12 @@ export default function Homepage({ plants }) {
     </>
   );
 }
+
+// const isAlreadyFavorite = favoritePlants.some(
+//   (plant) => plant.id === fav.id
+// );
+//   if (!isAlreadyFavorite) {
+//     setFavoritePlants([...favoritePlants, fav]);
+//   } else {
+//     alert("You already added me to Favorite Plants!");
+//   }
