@@ -3,20 +3,14 @@ import Link from "next/link";
 import { useState } from "react";
 
 export default function Homepage({ plants }) {
-  // const favoritePlantArray = [];
-  // function handleAddFavoritePlant(id) {
-  //   // const favoritePlants = plants.filter((plant) => plant.id === id);
-  //   console.log("my-favorite-plants:", favoritePlants);
-  //   return favoritePlants;
-  // }
-
   const [favoritePlants, setFavoritePlants] = useState([]);
 
   function addFavoritePlant(fav) {
     setFavoritePlants([...favoritePlants, fav]);
   }
 
-  console.log("favoritePlants: ", favoritePlants);
+  console.log("favoritePlants: ", favoritePlants); // fire the onClick event => add this plant to the favoritePlants
+  // console.log("plant: ", plants); every plant is in an [{}] in the console, 13 {}
   return (
     <>
       <h2>Welcome to your PlantWorld</h2>
