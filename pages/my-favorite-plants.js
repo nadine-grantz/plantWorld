@@ -3,6 +3,7 @@ import Link from "next/link";
 
 export default function MyFavoritePlants({ favoritePlants }) {
   console.log("My favorite Plants Page: ", favoritePlants);
+
   return (
     <>
       <h1>My Favorite Plants </h1>
