@@ -43,7 +43,7 @@ const Wrapper = styled.div`
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 `;
 
-export default function AddOwnPlant() {
+export default function AddOwnPlant({ addNewPlant }) {
   return (
     <>
       <StyledHeading>Add my own Plant</StyledHeading>

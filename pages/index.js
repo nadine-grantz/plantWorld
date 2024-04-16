@@ -51,7 +51,6 @@ export default function Homepage({
   );
 }
 
-// zweite Variante
 // const isAlreadyFavorite = favoritePlants.some(
 //   (plant) => plant.id === fav.id
 // );

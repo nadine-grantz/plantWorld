@@ -1,9 +1,9 @@
-// import GlobalStyle from "../styles";
 import { useState } from "react";
 import Navigation from "@/components/Navigation/navigation";
-import plants from "../lib/plants.json";
+import plantsData from "../lib/plants.json";
 
 export default function App({ Component, pageProps }) {
+  const [plants, setPlants] = useState(plantsData);
   const [favoritePlants, setFavoritePlants] = useState([]);
 
   function setFavoritePlantsState(newFavorites) {
