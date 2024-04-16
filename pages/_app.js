@@ -14,6 +14,7 @@ export default function App({ Component, pageProps }) {
     const updatedFavorites = favoritePlants.filter(
       (plant) => plant.id !== plantToRemove.id
     );
+    setFavoritePlants(updatedFavorites);
   }
   return (
     <>
