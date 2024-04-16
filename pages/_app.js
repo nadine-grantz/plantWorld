@@ -24,6 +24,7 @@ export default function App({ Component, pageProps }) {
         plants={plants}
         setFavoritePlantsState={setFavoritePlantsState}
         favoritePlants={favoritePlants}
+        removeFromFavorites={removeFromFavorites}
       />
     </>
   );
