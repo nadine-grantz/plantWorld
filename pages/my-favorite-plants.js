@@ -3,10 +3,16 @@ import Link from "next/link";
 
 export default function MyFavoritePlants({
   favoritePlants,
-  removeFromFavorites,
+  setFavoritePlantsState,
 }) {
   console.log("My favorite Plants Page: ", favoritePlants);
 
+  function removeFromFavorites(plantToRemove) {
+    const updatedFavorites = favoritePlants.filter(
+      (plant) => plant.id !== plantToRemove.id
+    );
+    setFavoritePlantsState(updatedFavorites);
+  }
   return (
     <>
       <h1>My Favorite Plants </h1>

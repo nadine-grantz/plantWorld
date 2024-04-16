@@ -10,12 +10,6 @@ export default function App({ Component, pageProps }) {
     setFavoritePlants(newFavorites);
   }
 
-  function removeFromFavorites(plantToRemove) {
-    const updatedFavorites = favoritePlants.filter(
-      (plant) => plant.id !== plantToRemove.id
-    );
-    setFavoritePlants(updatedFavorites);
-  }
   return (
     <>
       <Navigation />
@@ -24,7 +18,6 @@ export default function App({ Component, pageProps }) {
         plants={plants}
         setFavoritePlantsState={setFavoritePlantsState}
         favoritePlants={favoritePlants}
-        removeFromFavorites={removeFromFavorites}
       />
     </>
   );
