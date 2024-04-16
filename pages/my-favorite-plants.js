@@ -1,7 +1,10 @@
 import React from "react";
 import Link from "next/link";
 
-export default function MyFavoritePlants({ favoritePlants }) {
+export default function MyFavoritePlants({
+  favoritePlants,
+  removeFromFavorites,
+}) {
   console.log("My favorite Plants Page: ", favoritePlants);
 
   return (
@@ -19,6 +22,9 @@ export default function MyFavoritePlants({ favoritePlants }) {
                 alt={plant.title}
               />
             </Link>
+            <button onClick={(event) => removeFromFavorites(plant)}>
+              Remove
+            </button>
           </li>
         ))}
       </ul>
