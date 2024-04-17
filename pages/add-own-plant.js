@@ -2,10 +2,10 @@
 // zu my-plants. Es muss eine Suchfunktion geben in der man nach z.B. care, watering, sun etc filtern kann
 import AddOwnPlant from "@/components/Forms/AddOwnPlant";
 
-export default function AddOwnPlants() {
+export default function AddOwnPlants({ plants, onAddNewPlant }) {
   return (
     <>
-      <AddOwnPlant />
+      <AddOwnPlant plants={plants} onAddNewPlant={onAddNewPlant} />
     </>
   );
 }

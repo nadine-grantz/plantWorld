@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { uid } from "uid";
 
 const StyledForm = styled.form`
   display: grid;
@@ -43,12 +44,21 @@ const Wrapper = styled.div`
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 `;
 
-export default function AddOwnPlant({ addNewPlant }) {
+export default function AddOwnPlant({ plants, onAddNewPlant }) {
+  function handleSubmit(event) {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    const data = Object.fromEntries(FormData);
+
+    onAddNewPlant([...plants, newPlant]); // Add the new plant to the existing list of plants
+  }
+
+  console.log("plants: ", plants);
   return (
     <>
       <StyledHeading>Add my own Plant</StyledHeading>
       <Wrapper>
-        <StyledForm>
+        <StyledForm onSubmit={handleSubmit}>
           <StyledLabel htmlFor="title">Plant-Name</StyledLabel>
           <StyledInput type="text" id="title" name="title" required />
 
@@ -67,7 +77,9 @@ export default function AddOwnPlant({ addNewPlant }) {
           <StyledLabel htmlFor="picture">Picture</StyledLabel>
           <StyledInput type="link" id="picture" name="picture" />
 
-          <StyledButton type="submit">Save Plant</StyledButton>
+          <StyledButton type="submit" onClick={handleSubmit}>
+            Save Plant
+          </StyledButton>
           <StyledButton type="button">Cancel</StyledButton>
         </StyledForm>
       </Wrapper>
