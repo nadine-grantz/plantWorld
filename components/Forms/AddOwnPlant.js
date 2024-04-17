@@ -44,12 +44,12 @@ const Wrapper = styled.div`
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 `;
 
-export default function AddOwnPlant({ plants, setOwnPlantsState }) {
+export default function AddOwnPlant({ plants, setPlantsState }) {
   function handleSubmit(event) {
     event.preventDefault();
-    const formData = new FormData(event.CurrentTarget);
+    const formData = new FormData(event.currentTarget);
     const newPlant = Object.fromEntries(formData);
-    setOwnPlantsState([...plants, { id: uid, ...plants }]);
+    setPlantsState([...plants, { id: uid(), ...newPlant }]);
   }
 
   return (
@@ -75,9 +75,7 @@ export default function AddOwnPlant({ plants, setOwnPlantsState }) {
           <StyledLabel htmlFor="picture">Picture</StyledLabel>
           <StyledInput type="link" id="picture" name="picture" />
 
-          <StyledButton type="submit" onClick={handleSubmit}>
-            Save Plant
-          </StyledButton>
+          <StyledButton type="submit">Save Plant</StyledButton>
           <StyledButton type="button">Cancel</StyledButton>
         </StyledForm>
       </Wrapper>
