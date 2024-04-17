@@ -45,12 +45,25 @@ const Wrapper = styled.div`
 `;
 
 export default function AddOwnPlant({ plants, onAddNewPlant }) {
+  // function handleSubmit(event) {
+  //   event.preventDefault();
+  //   const formData = new FormData(event.currentTarget);
+  //   const newPlant = Object.fromEntries(formData);
+
+  //   // onAddNewPlant([...plants, newPlant]);
+  //   onAddNewPlant(newPlant);
+  // }
+
   function handleSubmit(event) {
     event.preventDefault();
-    const formData = new FormData(event.target);
-    const data = Object.fromEntries(FormData);
+    const formData = new FormData(event.currentTarget);
+    const newPlant = {};
 
-    onAddNewPlant([...plants, newPlant]); // Add the new plant to the existing list of plants
+    formData.forEach((value, key) => {
+      newPlant[key] = value;
+    });
+
+    onAddNewPlant(newPlant);
   }
 
   console.log("plants: ", plants);
