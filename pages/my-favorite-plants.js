@@ -5,8 +5,6 @@ export default function MyFavoritePlants({
   favoritePlants,
   setFavoritePlantsState,
 }) {
-  console.log("My favorite Plants Page: ", favoritePlants);
-
   function removeFromFavorites(plantToRemove) {
     const updatedFavorites = favoritePlants.filter(
       (plant) => plant.id !== plantToRemove.id

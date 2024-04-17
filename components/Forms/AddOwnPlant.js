@@ -49,7 +49,9 @@ export default function AddOwnPlant({ plants, setPlantsState }) {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
     const newPlant = Object.fromEntries(formData);
+    console.log("newPlant: ", newPlant);
     setPlantsState([...plants, { id: uid(), ...newPlant }]);
+    console.log("plants: ", plants);
   }
 
   return (
