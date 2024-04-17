@@ -44,29 +44,14 @@ const Wrapper = styled.div`
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 `;
 
-export default function AddOwnPlant({ plants, onAddNewPlant }) {
-  // function handleSubmit(event) {
-  //   event.preventDefault();
-  //   const formData = new FormData(event.currentTarget);
-  //   const newPlant = Object.fromEntries(formData);
-
-  //   // onAddNewPlant([...plants, newPlant]);
-  //   onAddNewPlant(newPlant);
-  // }
-
+export default function AddOwnPlant({ plants, setOwnPlantsState }) {
   function handleSubmit(event) {
     event.preventDefault();
-    const formData = new FormData(event.currentTarget);
-    const newPlant = {};
-
-    formData.forEach((value, key) => {
-      newPlant[key] = value;
-    });
-
-    onAddNewPlant(newPlant);
+    const formData = new FormData(event.CurrentTarget);
+    const newPlant = Object.fromEntries(formData);
+    setOwnPlantsState([...plants, { id: uid, ...plants }]);
   }
 
-  console.log("plants: ", plants);
   return (
     <>
       <StyledHeading>Add my own Plant</StyledHeading>

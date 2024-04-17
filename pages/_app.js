@@ -11,10 +11,8 @@ export default function App({ Component, pageProps }) {
     setFavoritePlants(newFavorites);
   }
 
-  function addNewPlant(newPlant) {
-    const newPlantWithId = { ...newPlant, id: uid() };
-    setPlants([newPlantWithId, ...plants]);
-    console.log("meine neue pflanze: ", newPlantWithId);
+  function setPlantsState(newPlant) {
+    setPlants(newPlant);
   }
 
   return (
@@ -25,7 +23,7 @@ export default function App({ Component, pageProps }) {
         plants={plants}
         setFavoritePlantsState={setFavoritePlantsState}
         favoritePlants={favoritePlants}
-        onAddNewPlant={addNewPlant}
+        setPlantsState={setPlantsState}
       />
     </>
   );
