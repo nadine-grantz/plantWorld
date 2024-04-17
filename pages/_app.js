@@ -11,8 +11,8 @@ export default function App({ Component, pageProps }) {
     setFavoritePlants(newFavorites);
   }
 
-  function setPlantsState(newPlant) {
-    setPlants(newPlant);
+  function setPlantsState(newOwnPlant) {
+    setPlants(newOwnPlant);
   }
 
   return (
