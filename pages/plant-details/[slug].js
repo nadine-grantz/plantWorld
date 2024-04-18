@@ -8,6 +8,8 @@ export default function Details({ plants }) {
   const { slug } = router.query;
   const currentPlant = plants.find((plant) => plant.slug === slug);
 
+  //console.log("Slug: ", slug);
+
   if (!currentPlant) {
     return <div>Sorry, we do not found the plant</div>;
   }

@@ -45,13 +45,22 @@ const Wrapper = styled.div`
 `;
 
 export default function AddOwnPlant({ plants, setPlantsState }) {
+  // Helper function, damit Leerzeichen ersetzt werden + lowercase
+  function createNewSlugForOwnPlant(title) {
+    return title.toLowerCase().replace(/\s+/g, "-");
+  }
+
   function handleSubmit(event) {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
     const newPlant = Object.fromEntries(formData);
+    // Title wird in Slug umgewandelt
+    const slug = createNewSlugForOwnPlant(newPlant.title);
+    // const plantWithSlug = { ...newPlant, slug };
     console.log("newPlant: ", newPlant);
-    setPlantsState([...plants, { id: uid(), ...newPlant }]);
-    console.log("plants: ", plants);
+    setPlantsState([...plants, { id: uid(), ...newPlant, slug }]);
+    // setPlantsState([...plants, plantWithSlug]);
+    // console.log("plants: ", plants);
   }
 
   return (
