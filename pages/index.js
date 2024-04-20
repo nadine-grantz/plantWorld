@@ -28,9 +28,9 @@ const StyledImage = styled.img`
 
 const StyledButton = styled.button`
   position: absolute;
-  top: 5px;
-  right: 5px;
-  color: red;
+  top: 20px;
+  right: 15px;
+  color: green;
   z-index: 2;
 `;
 
@@ -104,12 +104,10 @@ export default function Homepage({
                   <StyledImage src={plant.picture} alt={plant.title} />
                 </StyledImageContainer>
                 <StyledCardTitle>{plant.title}</StyledCardTitle>
-                <div>
-                  <PlantLevel>{plant.level}</PlantLevel>
-                  <PlantLocation>{plant.place}</PlantLocation>
-                </div>
+                <PlantLevel>{plant.level}</PlantLevel>
+                <PlantLocation>{plant.place}</PlantLocation>
               </Container>
-            </Link>{" "}
+            </Link>
             <StyledButton
               disabled={isPlantInFavoritePlants(plant)}
               onClick={(event) => handleAddFavoritePlant(plant)}
