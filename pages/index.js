@@ -72,7 +72,6 @@ export default function Homepage({
     <>
       <h1>Welcome to your plantWorld</h1>
       <StyledList>
-        {/* <Masonry theme={theme} columns={{ xs: 1, sm: 2, md: 3 }} spacing={2}> */}
         {plants.map((plant) => (
           <ProjectCard key={plant.id}>
             <Link href={`/plant-details/${plant.slug}`}>
@@ -94,7 +93,6 @@ export default function Homepage({
             </Container>
           </ProjectCard>
         ))}
-        {/* </Masonry> */}
       </StyledList>
     </>
   );
