@@ -1,5 +1,52 @@
 import React from "react";
 import Link from "next/link";
+import styled from "styled-components";
+
+const ProjectCard = styled.li`
+  position: relative;
+  border-radius: 5px;
+  height: fit-content;
+`;
+
+const StyledList = styled.ul`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+`;
+
+const StyledImage = styled.img`
+  width: 100%;
+  height: auto;
+  min-height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+  filter: brightness(70%);
+`;
+
+const StyledButton = styled.button`
+  text-align: right;
+`;
+
+const StyledCardTitle = styled.h2`
+  margin: 0;
+  color: white;
+  // width: 100%;
+`;
+
+const Container = styled.div`
+  display: flex;
+  align-content: space-between;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  padding: 12px;
+  z-index: 1;
+  gap: 5px;
+  flex-wrap: wrap;
+`;
 
 export default function Homepage({
   plants,
@@ -21,41 +68,34 @@ export default function Homepage({
     }
   }
 
-  console.log("favoritePlants: ", favoritePlants);
-
   return (
     <>
-      <h2>Welcome to your PlantWorld</h2>
-      <ul>
+      <h1>Welcome to your plantWorld</h1>
+      <StyledList>
+        {/* <Masonry theme={theme} columns={{ xs: 1, sm: 2, md: 3 }} spacing={2}> */}
         {plants.map((plant) => (
-          <li key={plant.id}>
-            <h2>{plant.title}</h2>
+          <ProjectCard key={plant.id}>
             <Link href={`/plant-details/${plant.slug}`}>
-              <img
+              <StyledImage
                 src={plant.picture}
                 width={100}
-                height={149}
+                height={100}
                 alt={plant.title}
               />
             </Link>
-            <button
-              disabled={isPlantInFavoritePlants(plant)}
-              onClick={(event) => handleAddFavoritePlant(plant)}
-            >
-              Favorite
-            </button>
-          </li>
+            <Container>
+              <StyledButton
+                disabled={isPlantInFavoritePlants(plant)}
+                onClick={(event) => handleAddFavoritePlant(plant)}
+              >
+                Favorite
+              </StyledButton>
+              <StyledCardTitle>{plant.title}</StyledCardTitle>
+            </Container>
+          </ProjectCard>
         ))}
-      </ul>
+        {/* </Masonry> */}
+      </StyledList>
     </>
   );
 }
-
-// const isAlreadyFavorite = favoritePlants.some(
-//   (plant) => plant.id === fav.id
-// );
-//   if (!isAlreadyFavorite) {
-//     setFavoritePlants([...favoritePlants, fav]);
-//   } else {
-//     alert("You already added me to Favorite Plants!");
-//   }
