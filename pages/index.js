@@ -20,7 +20,7 @@ const StyledImageContainer = styled.div`
 `;
 
 const StyledImage = styled.img`
-  width: 60%;
+  width: 100%;
   height: auto;
   border-radius: 5px;
   filter: brightness(70%);
@@ -28,23 +28,21 @@ const StyledImage = styled.img`
 
 const StyledButton = styled.button`
   position: absolute;
-  top: 5%;
-  left: 30%;
+  top: 5px;
+  right: 5px;
   color: red;
   z-index: 2;
 `;
 
 const StyledCardTitle = styled.h2`
   position: absolute;
-  bottom: 20%;
-  left: 3%;
+  bottom: 60px;
+  left: 10px;
   color: white;
   margin: 0;
 `;
 
 const Container = styled.div`
-  display: flex;
-  flex-direction: column;
   position: relative;
 `;
 
@@ -53,13 +51,12 @@ const PlantLevel = styled.p`
   max-width: 100px;
   border-radius: 5px;
   padding: 5px;
-  display: flex;
-  justify-content: center;
+
   color: black;
-  font-weight: 500;
+
   position: absolute;
-  bottom: 90%;
-  left: 3%;
+  bottom: 10px;
+  left: 10px;
 `;
 
 const PlantLocation = styled.p`
@@ -67,12 +64,11 @@ const PlantLocation = styled.p`
   max-width: 100px;
   border-radius: 5px;
   padding: 5px;
-  display: flex;
-  justify-content: center;
+
   color: black;
-  font-weight: 500;
+
   position: absolute;
-  bottom: 90%;
+  bottom: 10px;
   right: 50%;
 `;
 
@@ -103,27 +99,20 @@ export default function Homepage({
         {plants.map((plant) => (
           <PlantCard key={plant.id}>
             <Link href={`/plant-details/${plant.slug}`}>
-              <StyledImageContainer>
-                <StyledImage
-                  src={plant.picture}
-                  width={100}
-                  height={100}
-                  alt={plant.title}
-                />
-              </StyledImageContainer>
-              <StyledButton
-                disabled={isPlantInFavoritePlants(plant)}
-                onClick={(event) => handleAddFavoritePlant(plant)}
-              >
-                Favorite
-              </StyledButton>
-              <StyledCardTitle>{plant.title}</StyledCardTitle>
               <Container>
+                <StyledImageContainer>
+                  <StyledImage src={plant.picture} alt={plant.title} />
+                  <StyledButton
+                    disabled={isPlantInFavoritePlants(plant)}
+                    onClick={(event) => handleAddFavoritePlant(plant)}
+                  >
+                    Favorite
+                  </StyledButton>
+                </StyledImageContainer>
+                <StyledCardTitle>{plant.title}</StyledCardTitle>
                 <div>
-                  <div>
-                    <PlantLevel>{plant.level}</PlantLevel>
-                    <PlantLocation>{plant.place}</PlantLocation>
-                  </div>
+                  <PlantLevel>{plant.level}</PlantLevel>
+                  <PlantLocation>{plant.place}</PlantLocation>
                 </div>
               </Container>
             </Link>
