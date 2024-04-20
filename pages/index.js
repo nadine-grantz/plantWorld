@@ -102,12 +102,6 @@ export default function Homepage({
               <Container>
                 <StyledImageContainer>
                   <StyledImage src={plant.picture} alt={plant.title} />
-                  <StyledButton
-                    disabled={isPlantInFavoritePlants(plant)}
-                    onClick={(event) => handleAddFavoritePlant(plant)}
-                  >
-                    Favorite
-                  </StyledButton>
                 </StyledImageContainer>
                 <StyledCardTitle>{plant.title}</StyledCardTitle>
                 <div>
@@ -115,7 +109,13 @@ export default function Homepage({
                   <PlantLocation>{plant.place}</PlantLocation>
                 </div>
               </Container>
-            </Link>
+            </Link>{" "}
+            <StyledButton
+              disabled={isPlantInFavoritePlants(plant)}
+              onClick={(event) => handleAddFavoritePlant(plant)}
+            >
+              Favorite
+            </StyledButton>
           </PlantCard>
         ))}
       </StyledList>
