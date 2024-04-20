@@ -7,6 +7,8 @@
     "location": "Low to moderate indirect light",
     "watering": "Water sparingly, allowing soil to dry out between waterings.",
     "care": "Thrives in well-draining soil, avoid overwatering as it can lead to root rot.",
+    "level": "beginner",
+    "place": "half shadow",
     "picture": "https://images.unsplash.com/photo-1593482892540-73c9199d8949?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
@@ -17,6 +19,8 @@
     "location": "Low to bright indirect light",
     "watering": "Water sparingly, allowing soil to dry out completely between waterings.",
     "care": "Prefers well-draining soil, avoid overwatering to prevent root rot.",
+    "level": "intermediate",
+    "place": "sunny",
     "picture": "https://images.unsplash.com/photo-1632207691143-643e2a9a9361?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
@@ -27,6 +31,8 @@
     "location": "Bright indirect light",
     "watering": "Keep soil consistently moist, but not soggy.",
     "care": "Regularly remove brown tips and dead leaves, propagate easily from offsets.",
+    "level": "advanced",
+    "place": "sunny",
     "picture": "https://images.unsplash.com/photo-1572688484438-313a6e50c333?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
@@ -37,6 +43,8 @@
     "location": "Low to moderate indirect light",
     "watering": "Water when the soil surface is dry, but avoid overwatering.",
     "care": "Keep leaves dust-free, occasional misting can increase humidity levels.",
+    "level": "beginner",
+    "place": "sunny",
     "picture": "https://images.unsplash.com/photo-1593691509543-c55fb32d8de5?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
@@ -47,6 +55,8 @@
     "location": "Low to bright indirect light",
     "watering": "Allow soil to dry out between waterings, but don't let it dry completely.",
     "care": "Prune regularly to encourage bushier growth, propagate easily from stem cuttings.",
+    "level": "intermediate",
+    "place": "hald shadow",
     "picture": "https://images.unsplash.com/photo-1596724878582-76f1a8fdc24f?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
@@ -57,6 +67,8 @@
     "location": "Direct sunlight",
     "watering": "Water deeply but infrequently, allowing soil to dry out between waterings.",
     "care": "Ensure good drainage to prevent root rot, avoid getting water on the leaves to prevent rot.",
+    "level": "beginner",
+    "place": "sunny",
     "picture": "https://images.unsplash.com/photo-1569745358610-b01866003860?q=80&w=1035&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
@@ -67,6 +79,8 @@
     "location": "Low to moderate indirect light",
     "watering": "Water moderately, allowing the top inch of soil to dry out between waterings.",
     "care": "Wipe leaves with a damp cloth to keep them clean and shiny, avoid sudden temperature changes.",
+    "level": "advanced",
+    "place": "sunny",
     "picture": "https://images.unsplash.com/photo-1615804509230-86d839151e0c?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
@@ -77,6 +91,8 @@
     "location": "Bright indirect light",
     "watering": "Water regularly, keeping soil consistently moist but not waterlogged.",
     "care": "Provide support for climbing vines, mist leaves regularly to increase humidity.",
+    "level": "advanced",
+    "place": "half shadow",
     "picture": "https://images.unsplash.com/photo-1614594975525-e45190c55d0b?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
@@ -87,6 +103,8 @@
     "location": "Bright indirect light",
     "watering": "Water when the top inch of soil is dry, avoid overwatering as it can lead to root rot.",
     "care": "Rotate plant regularly to ensure even growth, wipe leaves to keep them dust-free.",
+    "level": "beginner",
+    "place": "sunny",
     "picture": "https://images.unsplash.com/photo-1545239705-1564e58b9e4a?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
@@ -97,6 +115,8 @@
     "location": "Low to moderate indirect light",
     "watering": "Water when the top inch of soil is dry, avoid overwatering.",
     "care": "Prune to control size and shape, propagate easily from stem cuttings.",
+    "level": "intermediate",
+    "place": "sunny",
     "picture": "https://images.unsplash.com/photo-1609142621730-db3293839541?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
@@ -107,6 +127,8 @@
     "location": "Bright indirect light",
     "watering": "Water when the top inch of soil is dry, ensuring good drainage.",
     "care": "Rotate regularly to prevent leaning, propagate easily from offshoots.",
+    "level": "beginner",
+    "place": "sunny",
     "picture": "https://images.unsplash.com/photo-1589999251554-21789097351f?q=80&w=1296&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
@@ -117,6 +139,8 @@
     "location": "Low to moderate indirect light",
     "watering": "Water moderately, allowing the soil to partially dry out between waterings.",
     "care": "Mist regularly to increase humidity, avoid exposure to drafts.",
+    "level": "intermediate",
+    "place": "sunnhalf shadowy",
     "picture": "https://images.unsplash.com/photo-1687269111857-3b398711c2f4?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
@@ -127,6 +151,8 @@
     "location": "Low to moderate indirect light",
     "watering": "Keep soil consistently moist, but not waterlogged.",
     "care": "Prune regularly to maintain shape",
+    "level": "intermediate",
+    "place": "shadow",
     "picture": "https://images.unsplash.com/photo-1690480433912-8e3ff3c21f38?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   }
 ]

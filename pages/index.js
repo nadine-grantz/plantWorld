@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
 
-const ProjectCard = styled.li`
+const PlantCard = styled.li`
   position: relative;
   border-radius: 5px;
   height: fit-content;
@@ -11,41 +11,69 @@ const ProjectCard = styled.li`
 const StyledList = styled.ul`
   display: flex;
   flex-direction: column;
-  justify-content: center;
   list-style: none;
   padding: 0;
 `;
 
+const StyledImageContainer = styled.div`
+  position: relative;
+`;
+
 const StyledImage = styled.img`
-  width: 100%;
+  width: 60%;
   height: auto;
-  min-height: 150px;
-  object-fit: cover;
   border-radius: 5px;
   filter: brightness(70%);
 `;
 
 const StyledButton = styled.button`
-  text-align: right;
+  position: absolute;
+  top: 5%;
+  left: 30%;
+  color: red;
+  z-index: 2;
 `;
 
 const StyledCardTitle = styled.h2`
-  margin: 0;
+  position: absolute;
+  bottom: 20%;
+  left: 3%;
   color: white;
-  // width: 100%;
+  margin: 0;
 `;
 
 const Container = styled.div`
   display: flex;
-  align-content: space-between;
+  flex-direction: column;
+  position: relative;
+`;
+
+const PlantLevel = styled.p`
+  background: rgba(255, 255, 255, 0.6);
+  max-width: 100px;
+  border-radius: 5px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  color: black;
+  font-weight: 500;
   position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  padding: 12px;
-  z-index: 1;
-  gap: 5px;
-  flex-wrap: wrap;
+  bottom: 90%;
+  left: 3%;
+`;
+
+const PlantLocation = styled.p`
+  background: rgba(255, 255, 255, 0.6);
+  max-width: 100px;
+  border-radius: 5px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  color: black;
+  font-weight: 500;
+  position: absolute;
+  bottom: 90%;
+  right: 50%;
 `;
 
 export default function Homepage({
@@ -73,16 +101,16 @@ export default function Homepage({
       <h1>Welcome to your plantWorld</h1>
       <StyledList>
         {plants.map((plant) => (
-          <ProjectCard key={plant.id}>
+          <PlantCard key={plant.id}>
             <Link href={`/plant-details/${plant.slug}`}>
-              <StyledImage
-                src={plant.picture}
-                width={100}
-                height={100}
-                alt={plant.title}
-              />
-            </Link>
-            <Container>
+              <StyledImageContainer>
+                <StyledImage
+                  src={plant.picture}
+                  width={100}
+                  height={100}
+                  alt={plant.title}
+                />
+              </StyledImageContainer>
               <StyledButton
                 disabled={isPlantInFavoritePlants(plant)}
                 onClick={(event) => handleAddFavoritePlant(plant)}
@@ -90,8 +118,16 @@ export default function Homepage({
                 Favorite
               </StyledButton>
               <StyledCardTitle>{plant.title}</StyledCardTitle>
-            </Container>
-          </ProjectCard>
+              <Container>
+                <div>
+                  <div>
+                    <PlantLevel>{plant.level}</PlantLevel>
+                    <PlantLocation>{plant.place}</PlantLocation>
+                  </div>
+                </div>
+              </Container>
+            </Link>
+          </PlantCard>
         ))}
       </StyledList>
     </>
