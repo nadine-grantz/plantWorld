@@ -8,7 +8,7 @@ const StyledHeader = styled.h1`
   font-size: 2rem;
   width: 100%;
   letter-spacing: 0.5rem;
-  color: #538c50;
+  color: 0c140b;
   // &:hover {
   //   background: rgba(255, 255, 255, 0.8);
   //   color: red;
@@ -22,10 +22,12 @@ const PlantCard = styled.li`
 `;
 
 const StyledList = styled.ul`
-  display: flex;
-  flex-direction: column;
-  list-style: none;
   padding: 0;
+  list-style: none;
+  //Idea of responsive Design
+  // display: grid;
+  // grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Responsive masonry */
+  // gap: 1rem;
 `;
 
 const StyledImage = styled.img`
@@ -43,8 +45,7 @@ const StyledButton = styled.button`
   background: #d36e70;
   border-radius: 5px;
   margin: 0;
-  font-weight:900;
-  }
+  font-weight: 900;
 `;
 
 const StyledCardTitle = styled.h2`
@@ -55,16 +56,15 @@ const StyledCardTitle = styled.h2`
 `;
 
 const Container = styled.div`
-  display: flex;
+  display: grid;
+  flex-wrap: wrap;
   align-content: space-between;
   position: absolute;
   height: 100%;
   width: 100%;
   top: 0;
   padding: 12px;
-  z-index: 1;
   gap: 5px;
-  flex-wrap: wrap;
 `;
 
 const PlantInfo = styled.p`
@@ -74,7 +74,6 @@ const PlantInfo = styled.p`
   padding: 5px;
   margin: 0;
   display: flex;
-  justify-content: center;
   color: grey;
 `;
 
@@ -87,14 +86,12 @@ const DetailsLine = styled.div`
   justify-content: space-between;
   width: 100%;
   gap: 5px;
-  flex-wrap: nowrap;
   height: fit-content;
 `;
 
 const LevelLocation = styled.div`
   display: flex;
   gap: 5px;
-  flex-wrap: wrap;
   height: fit-content;
 `;
 
