@@ -2,6 +2,19 @@ import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
 
+const StyledHeader = styled.h1`
+  font-family: Moderne Sans, sans-serif;
+  text-align: center;
+  font-size: 2rem;
+  width: 100%;
+  letter-spacing: 0.5rem;
+  color: #538c50;
+  // &:hover {
+  //   background: rgba(255, 255, 255, 0.8);
+  //   color: red;
+  // }
+`;
+
 const PlantCard = styled.li`
   position: relative;
   border-radius: 10px;
@@ -112,7 +125,7 @@ export default function Homepage({
 
   return (
     <>
-      <h1>Welcome to your plantWorld</h1>
+      <StyledHeader>plantWorld</StyledHeader>
       <StyledList>
         {plants.map((plant) => (
           <PlantCard key={plant.id}>
