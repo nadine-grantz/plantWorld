@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const PlantCard = styled.li`
   position: relative;
-  border-radius: 5px;
+  border-radius: 10px;
   height: fit-content;
 `;
 
@@ -22,54 +22,72 @@ const StyledImageContainer = styled.div`
 const StyledImage = styled.img`
   width: 100%;
   height: auto;
+  min-height: 150px;
+  object-fit: cover;
   border-radius: 5px;
   filter: brightness(70%);
 `;
 
 const StyledButton = styled.button`
-  position: absolute;
-  top: 20px;
-  right: 15px;
-  color: green;
-  z-index: 2;
+  border: none;
+  max-width: 100px;
+  background: #ea899a;
+  border-radius: 5px;
+  margin: 0;
+  justify-content: center;
+  cursor: pointer;
+  }
 `;
 
 const StyledCardTitle = styled.h2`
-  position: absolute;
-  bottom: 60px;
-  left: 10px;
-  color: white;
   margin: 0;
+  color: white;
+  width: 100%;
+  height: fit-content;
 `;
 
 const Container = styled.div`
-  position: relative;
+  display: flex;
+  align-content: space-between;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  padding: 12px;
+  z-index: 1;
+  gap: 5px;
+  flex-wrap: wrap;
 `;
 
-const PlantLevel = styled.p`
+const PlantInfo = styled.p`
   background: rgba(255, 255, 255, 0.6);
   max-width: 100px;
   border-radius: 5px;
   padding: 5px;
-
-  color: black;
-
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  color: grey;
 `;
 
-const PlantLocation = styled.p`
-  background: rgba(255, 255, 255, 0.6);
-  max-width: 100px;
-  border-radius: 5px;
-  padding: 5px;
+const PlantLevel = styled(PlantInfo)``;
 
-  color: black;
+const PlantLocation = styled(PlantInfo)``;
 
-  position: absolute;
-  bottom: 10px;
-  right: 50%;
+const TagButtonLine = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 5px;
+  flex-wrap: nowrap;
+  height: fit-content;
+`;
+
+const TagLine = styled.div`
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  height: fit-content;
 `;
 
 export default function Homepage({
@@ -99,21 +117,25 @@ export default function Homepage({
         {plants.map((plant) => (
           <PlantCard key={plant.id}>
             <Link href={`/plant-details/${plant.slug}`}>
+              <StyledImageContainer>
+                <StyledImage src={plant.picture} alt={plant.title} />
+              </StyledImageContainer>
               <Container>
-                <StyledImageContainer>
-                  <StyledImage src={plant.picture} alt={plant.title} />
-                </StyledImageContainer>
+                <TagButtonLine>
+                  <TagLine>
+                    <PlantLevel>{plant.level}</PlantLevel>
+                    <PlantLocation>{plant.place}</PlantLocation>
+                  </TagLine>
+                  <StyledButton
+                    disabled={isPlantInFavoritePlants(plant)}
+                    onClick={(event) => handleAddFavoritePlant(plant)}
+                  >
+                    Favorite
+                  </StyledButton>
+                </TagButtonLine>
                 <StyledCardTitle>{plant.title}</StyledCardTitle>
-                <PlantLevel>{plant.level}</PlantLevel>
-                <PlantLocation>{plant.place}</PlantLocation>
               </Container>
             </Link>
-            <StyledButton
-              disabled={isPlantInFavoritePlants(plant)}
-              onClick={(event) => handleAddFavoritePlant(plant)}
-            >
-              Favorite
-            </StyledButton>
           </PlantCard>
         ))}
       </StyledList>

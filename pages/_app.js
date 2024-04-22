@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Navigation from "@/components/Navigation/navigation";
 import plantsData from "../lib/plants.json";
+import GlobalStyles from "@/styles";
 
 export default function App({ Component, pageProps }) {
   const [plants, setPlants] = useState(plantsData);
@@ -16,6 +17,7 @@ export default function App({ Component, pageProps }) {
 
   return (
     <>
+      <GlobalStyles />
       <Navigation />
       <Component
         {...pageProps}

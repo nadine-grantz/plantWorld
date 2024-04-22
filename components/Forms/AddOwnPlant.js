@@ -28,16 +28,10 @@ const StyledButton = styled.button`
   width: 100%;
   padding: 0.7rem;
   border-radius: 8px;
-  font-family: "Open Sans", sans-serif;
-  text-transform: uppercase;
   cursor: pointer;
   background-color: #ff6b81;
-  color: #fff;
+  color: green;
   transition: background-color 0.3s ease;
-
-  &:hover {
-    background-color: #ff4757;
-  }
 `;
 
 const StyledHeading = styled.h1`
