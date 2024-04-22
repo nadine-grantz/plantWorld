@@ -27,16 +27,15 @@ const StyledImage = styled.img`
 const StyledButton = styled.button`
   border: none;
   max-width: 100px;
-  background: #ea899a;
+  background: #d36e70;
   border-radius: 5px;
   margin: 0;
-  justify-content: center;
-  cursor: pointer;
+  font-weight:900;
   }
 `;
 
 const StyledCardTitle = styled.h2`
-  margin: 0;
+  margin: 5px;
   color: white;
   width: 100%;
   height: fit-content;
@@ -70,7 +69,7 @@ const PlantLevel = styled(PlantInfo)``;
 
 const PlantLocation = styled(PlantInfo)``;
 
-const TagButtonLine = styled.div`
+const DetailsLine = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -79,7 +78,7 @@ const TagButtonLine = styled.div`
   height: fit-content;
 `;
 
-const TagLine = styled.div`
+const LevelLocation = styled.div`
   display: flex;
   gap: 5px;
   flex-wrap: wrap;
@@ -106,6 +105,11 @@ export default function Homepage({
     }
   }
 
+  function onFavoriteButtonClick(event, plant) {
+    event.preventDefault();
+    handleAddFavoritePlant(plant);
+  }
+
   return (
     <>
       <h1>Welcome to your plantWorld</h1>
@@ -115,18 +119,18 @@ export default function Homepage({
             <Link href={`/plant-details/${plant.slug}`}>
               <StyledImage src={plant.picture} alt={plant.title} />
               <Container>
-                <TagButtonLine>
-                  <TagLine>
+                <DetailsLine>
+                  <LevelLocation>
                     <PlantLevel>{plant.level}</PlantLevel>
                     <PlantLocation>{plant.place}</PlantLocation>
-                  </TagLine>
+                  </LevelLocation>
                   <StyledButton
                     disabled={isPlantInFavoritePlants(plant)}
-                    onClick={(event) => handleAddFavoritePlant(plant)}
+                    onClick={(event) => onFavoriteButtonClick(event, plant)}
                   >
                     Favorite
                   </StyledButton>
-                </TagButtonLine>
+                </DetailsLine>
                 <StyledCardTitle>{plant.title}</StyledCardTitle>
               </Container>
             </Link>
