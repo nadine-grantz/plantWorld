@@ -15,10 +15,6 @@ const StyledList = styled.ul`
   padding: 0;
 `;
 
-const StyledImageContainer = styled.div`
-  position: relative;
-`;
-
 const StyledImage = styled.img`
   width: 100%;
   height: auto;
@@ -117,9 +113,7 @@ export default function Homepage({
         {plants.map((plant) => (
           <PlantCard key={plant.id}>
             <Link href={`/plant-details/${plant.slug}`}>
-              <StyledImageContainer>
-                <StyledImage src={plant.picture} alt={plant.title} />
-              </StyledImageContainer>
+              <StyledImage src={plant.picture} alt={plant.title} />
               <Container>
                 <TagButtonLine>
                   <TagLine>
