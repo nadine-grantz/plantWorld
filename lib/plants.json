@@ -154,5 +154,113 @@
     "level": "intermediate",
     "place": "shadow",
     "picture": "https://images.unsplash.com/photo-1690480433912-8e3ff3c21f38?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": "14",
+    "title": "Devil's Backbone",
+    "slug": "Devils-Backbone",
+    "description": "Devil's Backbone, also known as Mother of Thousands, is a unique succulent with stacked, triangular leaves. It thrives in bright, indirect light and propagates easily from leaf cuttings.",
+    "location": "Bright indirect light",
+    "watering": "Allow soil to dry out between waterings, propagate easily from offsets.",
+    "care": "Prune regularly to control growth, avoid overwatering to prevent root rot.",
+    "level": "intermediate",
+    "place": "sunny",
+    "picture": "https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcSFqwzt5XhLbXPRb9Iqu8w1YvWyggs1FOyRqQaFZUplJ-kc5ryG6icQ9SO5lVcFoe8O_5bGIsLFLBMXKBw"
+  },
+  {
+    "id": "15",
+    "title": "Bird of Paradise",
+    "slug": "Bird-of-Paradise",
+    "description": "Bird of Paradise is a tropical plant with large, banana-like leaves and vibrant orange flowers. It thrives in bright, indirect light and high humidity.",
+    "location": "Bright indirect light",
+    "watering": "Water regularly, keeping soil consistently moist but not waterlogged.",
+    "care": "Mist leaves regularly to increase humidity, prune to maintain shape.",
+    "level": "advanced",
+    "place": "sunny",
+    "picture": "https://images.unsplash.com/photo-1600470700192-9ce181d5902f?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": "16",
+    "title": "African Violet",
+    "slug": "African-Violet",
+    "description": "African Violet is a popular flowering plant with fuzzy leaves and colorful blooms. It prefers bright, indirect light and consistent watering to thrive.",
+    "location": "Bright indirect light",
+    "watering": "Water when the top inch of soil is dry, avoid getting water on the leaves to prevent rot.",
+    "care": "Fertilize regularly during growing season, remove spent flowers to encourage blooming.",
+    "level": "intermediate",
+    "place": "sunny",
+    "picture": "https://images.unsplash.com/photo-1645286975285-61e710b35a87?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8QWZyaWNhbiUyMFZpb2xldHxlbnwwfHwwfHx8MA%3D%3D"
+  },
+  {
+    "id": "17",
+    "title": "Jade Plant",
+    "slug": "Jade-Plant",
+    "description": "Jade Plant, also known as Money Plant, is a succulent with fleshy, oval-shaped leaves. It thrives in bright, indirect light and requires minimal watering.",
+    "location": "Bright indirect light",
+    "watering": "Water sparingly, allowing soil to dry out between waterings.",
+    "care": "Propagate easily from leaf or stem cuttings, avoid overwatering to prevent root rot.",
+    "level": "beginner",
+    "place": "sunny",
+    "picture": "https://images.unsplash.com/photo-1621552330975-f5f9c85dc9c9?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8amFkZSUyMHBsYW50fGVufDB8fDB8fHww"
+  },
+  {
+    "id": "18",
+    "title": "Calathea",
+    "slug": "Calathea",
+    "description": "Calathea is a genus of tropical plants known for their decorative foliage and vibrant patterns. They thrive in bright, indirect light and high humidity.",
+    "location": "Bright indirect light",
+    "watering": "Keep soil consistently moist, but not waterlogged.",
+    "care": "Mist leaves regularly to increase humidity, avoid exposure to cold drafts.",
+    "level": "intermediate",
+    "place": "shadow",
+    "picture": "https://images.unsplash.com/photo-1597306200021-f8e16b12fb45?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Q2FsYXRoZWF8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    "id": "19",
+    "title": "String of Pearls",
+    "slug": "String-of-Pearls",
+    "description": "String of Pearls is a trailing succulent with small, spherical leaves that resemble pearls. It thrives in bright, indirect light and requires infrequent watering.",
+    "location": "Bright indirect light",
+    "watering": "Allow soil to dry out between waterings, propagate easily from stem cuttings.",
+    "care": "Provide support for trailing stems, prune to maintain shape.",
+    "level": "beginner",
+    "place": "sunny",
+    "picture": "https://images.unsplash.com/photo-1648070024741-43f8fa965966?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHN0cmluZyUyMG9mJTIwUGVhcmxzfGVufDB8fDB8fHww"
+  },
+  {
+    "id": "20",
+    "title": "String of Hearts",
+    "slug": "String-of-Hearts",
+    "description": "String of Hearts is a trailing succulent with heart-shaped leaves that grow along cascading stems. It thrives in bright, indirect light and requires infrequent watering.",
+    "location": "Bright indirect light",
+    "watering": "Allow soil to dry out between waterings, propagate easily from stem cuttings.",
+    "care": "Provide support for trailing stems, prune to maintain shape.",
+    "level": "beginner",
+    "place": "sunny",
+    "picture": "https://images.unsplash.com/photo-1622479303268-c7be347dfaf3?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8U3RyaW5nJTIwb2YlMjBIZWFydHN8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    "id": "21",
+    "title": "Ficus Lyrata",
+    "slug": "Ficus-Lyrata",
+    "description": "Ficus Lyrata, also known as Fiddle Leaf Fig, is a tropical tree with large, violin-shaped leaves. It thrives in bright, indirect light and requires regular watering.",
+    "location": "Bright indirect light",
+    "watering": "Water when the top inch of soil is dry, avoid overwatering to prevent root rot.",
+    "care": "Rotate regularly to ensure even growth, wipe leaves to keep them dust-free.",
+    "level": "beginner",
+    "place": "sunny",
+    "picture": "https://images.unsplash.com/photo-1603179614210-1836dcac7260?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fEZpY3VzJTIwTHlyYXRhfGVufDB8fDB8fHww"
+  },
+  {
+    "id": "22",
+    "title": "Schefflera",
+    "slug": "Schefflera",
+    "description": "Schefflera, also known as Umbrella Tree, is a tropical plant with palmate leaves that resemble an umbrella. It thrives in bright, indirect light and requires regular watering.",
+    "location": "Bright indirect light",
+    "watering": "Water moderately, allowing the top inch of soil to dry out between waterings.",
+    "care": "Prune to maintain shape, mist leaves to increase humidity.",
+    "level": "intermediate",
+    "place": "sunny",
+    "picture": "https://images.unsplash.com/photo-1659348447568-d0de3cb5a872?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8U2NoZWZmbGVyYXxlbnwwfHwwfHx8MA%3D%3D"
   }
 ]
