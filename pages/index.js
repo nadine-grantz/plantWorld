@@ -21,7 +21,7 @@ const PlantCard = styled.li`
   height: fit-content;
   width: 100%;
 
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 500px) {
     width: calc(50% - 10px);
   }
 
@@ -34,9 +34,10 @@ const StyledList = styled.ul`
   padding: 0;
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 1rem;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin: 1rem;
 `;
 
 const StyledImage = styled.img`
