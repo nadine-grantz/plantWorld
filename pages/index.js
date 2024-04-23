@@ -8,7 +8,7 @@ const StyledHeader = styled.h1`
   font-size: 2rem;
   width: 100%;
   letter-spacing: 0.5rem;
-  color: 0c140b;
+  color: #0c140b;
   // &:hover {
   //   background: rgba(255, 255, 255, 0.8);
   //   color: red;
@@ -19,15 +19,19 @@ const PlantCard = styled.li`
   position: relative;
   border-radius: 10px;
   height: fit-content;
+  width: 100%;
+  @media screen and (min-width: 700px) {
+    width: calc(50% - 10px);
+  }
 `;
 
 const StyledList = styled.ul`
   padding: 0;
   list-style: none;
-  //Idea of responsive Design
-  // display: grid;
-  // grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Responsive masonry */
-  // gap: 1rem;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
 `;
 
 const StyledImage = styled.img`
