@@ -29,6 +29,10 @@ const HorizontalNav = styled.nav`
   }
 `;
 
+const HorizontalNavItem = styled.li`
+  display: inline;
+`;
+
 const ChangeBar1 = styled(Bar)`
   transform: ${({ $isOpen }) =>
     $isOpen ? "translate(0, 11px) rotate(-45deg)" : "none"};
