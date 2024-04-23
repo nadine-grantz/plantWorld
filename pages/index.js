@@ -77,9 +77,9 @@ const PlantInfo = styled.p`
   color: grey;
 `;
 
-const PlantLevel = styled(PlantInfo)``;
+const PlantLevelLabel = styled(PlantInfo)``;
 
-const PlantLocation = styled(PlantInfo)``;
+const PlantLocationLabel = styled(PlantInfo)``;
 
 const DetailsLine = styled.div`
   display: flex;
@@ -89,7 +89,7 @@ const DetailsLine = styled.div`
   height: fit-content;
 `;
 
-const LevelLocation = styled.div`
+const Label = styled.div`
   display: flex;
   gap: 5px;
   height: fit-content;
@@ -130,10 +130,10 @@ export default function Homepage({
               <StyledImage src={plant.picture} alt={plant.title} />
               <Container>
                 <DetailsLine>
-                  <LevelLocation>
-                    <PlantLevel>{plant.level}</PlantLevel>
-                    <PlantLocation>{plant.place}</PlantLocation>
-                  </LevelLocation>
+                  <Label>
+                    <PlantLevelLabel>{plant.level}</PlantLevelLabel>
+                    <PlantLocationLabel>{plant.place}</PlantLocationLabel>
+                  </Label>
                   <StyledButton
                     disabled={isPlantInFavoritePlants(plant)}
                     onClick={(event) => onFavoriteButtonClick(event, plant)}
