@@ -3,8 +3,12 @@ import styled from "styled-components";
 import Link from "next/link";
 
 const Container = styled.div`
-  display: inline-block;
-  cursor: pointer;
+  display: none;
+  // cursor: pointer;
+
+  @media (max-width: 800px) {
+    display: block;
+  }
 `;
 
 const Bar = styled.div`
@@ -13,6 +17,16 @@ const Bar = styled.div`
   background-color: #333;
   margin: 6px 0;
   transition: 0.4s;
+`;
+
+const HorizontalNav = styled.nav`
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+
+  @media (max-width: 600px) {
+    display: none;
+  }
 `;
 
 const ChangeBar1 = styled(Bar)`
