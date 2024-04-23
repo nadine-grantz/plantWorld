@@ -20,8 +20,13 @@ const PlantCard = styled.li`
   border-radius: 10px;
   height: fit-content;
   width: 100%;
+
   @media screen and (min-width: 700px) {
     width: calc(50% - 10px);
+  }
+
+  @media screen and (min-width: 1000px) {
+    width: calc(30% - 10px);
   }
 `;
 
