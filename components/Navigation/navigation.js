@@ -19,18 +19,28 @@ const Bar = styled.div`
   transition: 0.4s;
 `;
 
-const HorizontalNav = styled.nav`
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
+// const HorizontalNav = styled.nav`
+//   display: flex;
+//   justify-content: space-between;
+//   text-align: center;
 
-  @media (max-width: 600px) {
-    display: none;
+//   @media (max-width: 600px) {
+//     display: none;
+//   }
+// `;
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: red;
+  font-size: 1rem;
+
+  &:hover {
+    background-color: blue;
   }
 `;
 
-const HorizontalNavItem = styled.li`
-  display: inline;
+const StyledLi = styled.li`
+  list-style: none;
 `;
 
 const ChangeBar1 = styled(Bar)`
@@ -68,23 +78,23 @@ export default function Navigation() {
         </Container>
         {isNavigationVisible && (
           <ul>
-            <li>
-              <Link href="/" onClick={handleLinkClick}>
+            <StyledLi>
+              <StyledLink href="/" onClick={handleLinkClick}>
                 Home
-              </Link>
-            </li>
+              </StyledLink>
+            </StyledLi>
 
-            <li>
-              <Link href="/add-own-plant" onClick={handleLinkClick}>
+            <StyledLi>
+              <StyledLink href="/add-own-plant" onClick={handleLinkClick}>
                 Add my own Plant
-              </Link>
-            </li>
+              </StyledLink>
+            </StyledLi>
 
-            <li>
-              <Link href="/my-favorite-plants" onClick={handleLinkClick}>
+            <StyledLi>
+              <StyledLink href="/my-favorite-plants" onClick={handleLinkClick}>
                 My favorite Plant
-              </Link>
-            </li>
+              </StyledLink>
+            </StyledLi>
           </ul>
         )}
       </nav>
