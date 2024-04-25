@@ -2,29 +2,23 @@ import styled from "styled-components";
 import BurgerNavigation from "./burgerNavigation";
 import HorizontalNavigation from "./horizontalNavigation";
 
-const DesktopNavbar = styled.BurgerNavigation`
-  display: flex;
-  @media screen and (max-width: 500px) {
+const DesktopNavbar = styled(BurgerNavigation)`
+  @media screen and (max-width: 499px) {
     display: none;
   }
 `;
 
-const MobileNavbar = styled.HorizontalNavigation`
-  display: none;
-  @media screen and (max-width: 500px) {
-    display: flex;
+const MobileNavbar = styled(HorizontalNavigation)`
+  @media screen and (min-width: 500px) {
+    displax: none;
   }
 `;
 
 export default function ResponsiveNavigation() {
   return (
     <>
-      <MobileNavbar>
-        <HorizontalNavigation />
-      </MobileNavbar>
-      <DesktopNavbar>
-        <BurgerNavigation />
-      </DesktopNavbar>
+      <MobileNavbar />
+      <DesktopNavbar />
     </>
   );
 }
