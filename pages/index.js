@@ -9,6 +9,7 @@ const StyledHeader = styled.h1`
   width: 100%;
   letter-spacing: 0.5rem;
   color: #0c140b;
+  position: relative;
   // &:hover {
   //   background: rgba(255, 255, 255, 0.8);
   //   color: red;

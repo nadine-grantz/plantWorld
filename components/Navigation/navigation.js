@@ -3,11 +3,14 @@ import styled from "styled-components";
 import Link from "next/link";
 
 const Container = styled.div`
-  display: none;
-  // cursor: pointer;
+  //display: none;
+  cursor: pointer;
 
-  @media (max-width: 800px) {
-    display: block;
+  @media screen and (max-width: 800px) {
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    width: 100%;
   }
 `;
 
@@ -19,28 +22,19 @@ const Bar = styled.div`
   transition: 0.4s;
 `;
 
-// const HorizontalNav = styled.nav`
-//   display: flex;
-//   justify-content: space-between;
-//   text-align: center;
-
-//   @media (max-width: 600px) {
-//     display: none;
-//   }
-// `;
-
-const StyledLink = styled(Link)`
-  text-decoration: none;
-  color: red;
-  font-size: 1rem;
-
-  &:hover {
-    background-color: blue;
+const StyledUl = styled.ul`
+  @media screen and (max-width: 800px) {
+    display: flex;
+    list-style: none;
   }
 `;
 
 const StyledLi = styled.li`
   list-style: none;
+  @media screen and (max-width: 800px) {
+    margin: 0 10px;
+    list-style: none;
+  }
 `;
 
 const ChangeBar1 = styled(Bar)`
@@ -77,27 +71,64 @@ export default function Navigation() {
           <ChangeBar3 $isOpen={isNavigationVisible} />
         </Container>
         {isNavigationVisible && (
-          <ul>
+          <StyledUl>
             <StyledLi>
-              <StyledLink href="/" onClick={handleLinkClick}>
+              <Link href="/" onClick={handleLinkClick}>
                 Home
-              </StyledLink>
+              </Link>
             </StyledLi>
 
             <StyledLi>
-              <StyledLink href="/add-own-plant" onClick={handleLinkClick}>
+              <Link href="/add-own-plant" onClick={handleLinkClick}>
                 Add my own Plant
-              </StyledLink>
+              </Link>
             </StyledLi>
 
             <StyledLi>
-              <StyledLink href="/my-favorite-plants" onClick={handleLinkClick}>
+              <Link href="/my-favorite-plants" onClick={handleLinkClick}>
                 My favorite Plant
-              </StyledLink>
+              </Link>
             </StyledLi>
-          </ul>
+          </StyledUl>
         )}
       </nav>
     </>
   );
 }
+
+// import Link from "next/link";
+// import styled from "styled-components";
+
+// const NavContainer = styled.nav`
+//   display: flex;
+//   justify-content: center;
+//   position: sticky;
+//   width: 100%; /
+// `;
+
+// const MenuList = styled.ul`
+//   display: flex;
+//   list-style: none;
+// `;
+
+// const StyledLi = styled.li`
+//   margin: 0 10px;
+// `;
+
+// export default function Navigation() {
+//   return (
+//     <NavContainer>
+//       <MenuList>
+//         <StyledLi>
+//           <Link href="/">Home</Link>
+//         </StyledLi>
+//         <StyledLi>
+//           <Link href="/add-own-plant">Add Own Plant</Link>
+//         </StyledLi>
+//         <StyledLi>
+//           <Link href="/my-favorite-plants">Favorite Plant</Link>
+//         </StyledLi>
+//       </MenuList>
+//     </NavContainer>
+//   );
+// }
