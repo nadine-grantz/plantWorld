@@ -72,6 +72,10 @@ const Label = styled.div`
   height: fit-content;
 `;
 
+const StyledInfo = styled.div`
+  color: red;
+`;
+
 export default function PlantDetails({ plant }) {
   const {
     title,
@@ -98,10 +102,12 @@ export default function PlantDetails({ plant }) {
               <StyledCardTitle>{title}</StyledCardTitle>
             </DetailsLine>
           </Container>
-          <li>{description}</li>
-          <li>{location}</li>
-          <li>{watering}</li>
-          <li>{care}</li>
+          <StyledInfo>
+            <li>{description}</li>
+            <li>{location}</li>
+            <li>{watering}</li>
+            <li>{care}</li>
+          </StyledInfo>
         </PlantCard>
       </StyledList>
     </>
