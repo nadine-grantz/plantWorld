@@ -1,13 +1,14 @@
 import styled from "styled-components";
 import BurgerNavigation from "./burgerNavigation";
-import HorizontalNavigation from "./horizontaNavigation";
+import HorizontalNavigation from "./horizontalNavigation";
 
-const DesktopNavbar = styled.Navigation`
+const DesktopNavbar = styled.BurgerNavigation`
   display: flex;
   @media screen and (max-width: 500px) {
     display: none;
   }
 `;
+
 const MobileNavbar = styled.HorizontalNavigation`
   display: none;
   @media screen and (max-width: 500px) {
