@@ -9,10 +9,7 @@ const StyledHeader = styled.h1`
   width: 100%;
   letter-spacing: 0.5rem;
   color: #0c140b;
-  // &:hover {
-  //   background: rgba(255, 255, 255, 0.8);
-  //   color: red;
-  // }
+  position: relative;
 `;
 
 const PlantCard = styled.li`
@@ -21,7 +18,7 @@ const PlantCard = styled.li`
   height: fit-content;
   width: 100%;
 
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 500px) {
     width: calc(50% - 10px);
   }
 
@@ -34,9 +31,10 @@ const StyledList = styled.ul`
   padding: 0;
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 1rem;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin: 1rem;
 `;
 
 const StyledImage = styled.img`
@@ -51,10 +49,11 @@ const StyledImage = styled.img`
 const StyledButton = styled.button`
   border: none;
   max-width: 100px;
-  background: #d36e70;
   border-radius: 5px;
   margin: 0;
   font-weight: 900;
+  background-color: ${(props) => (props.isFavorite ? "#374725" : "#d36e70")};
+  color: white;
 `;
 
 const StyledCardTitle = styled.h2`
@@ -110,23 +109,21 @@ export default function Homepage({
   favoritePlants,
 }) {
   function isPlantInFavoritePlants(plant) {
-    const isAlreadyFavorite = favoritePlants.some(
-      (favorite) => favorite.id === plant.id
-    );
-    return isAlreadyFavorite;
-  }
-
-  function handleAddFavoritePlant(maybeFavPlant) {
-    const isAlreadyFavorite = isPlantInFavoritePlants(maybeFavPlant);
-
-    if (!isAlreadyFavorite) {
-      setFavoritePlantsState([...favoritePlants, maybeFavPlant]);
-    }
+    return favoritePlants.some((favorite) => favorite.id === plant.id);
   }
 
   function onFavoriteButtonClick(event, plant) {
     event.preventDefault();
-    handleAddFavoritePlant(plant);
+    const isAlreadyFavorite = isPlantInFavoritePlants(plant);
+
+    if (isAlreadyFavorite) {
+      const updatedFavorites = favoritePlants.filter(
+        (favorite) => favorite.id !== plant.id
+      );
+      setFavoritePlantsState(updatedFavorites);
+    } else {
+      setFavoritePlantsState([...favoritePlants, plant]);
+    }
   }
 
   return (
@@ -144,10 +141,10 @@ export default function Homepage({
                     <PlantLocationLabel>{plant.place}</PlantLocationLabel>
                   </Label>
                   <StyledButton
-                    disabled={isPlantInFavoritePlants(plant)}
                     onClick={(event) => onFavoriteButtonClick(event, plant)}
+                    isFavorite={isPlantInFavoritePlants(plant)}
                   >
-                    Favorite
+                    {isPlantInFavoritePlants(plant) ? "Delete" : "Favorite"}
                   </StyledButton>
                 </DetailsLine>
                 <StyledCardTitle>{plant.title}</StyledCardTitle>
