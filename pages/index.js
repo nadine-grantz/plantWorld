@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
+import Masonry from "@mui/lab/Masonry";
 
 const StyledHeader = styled.h1`
   font-family: Moderne Sans, sans-serif;
@@ -15,7 +16,7 @@ const StyledHeader = styled.h1`
   // }
 `;
 
-const PlantCard = styled.li`
+const PlantCard = styled.div`
   position: relative;
   border-radius: 10px;
   height: fit-content;
@@ -30,14 +31,13 @@ const PlantCard = styled.li`
   }
 `;
 
-const StyledList = styled.ul`
-  padding: 0;
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: space-between;
-`;
+// const StyledList = styled.div`
+//   padding: 0;
+//   list-style: none;
+//   display: flex;
+//   gap: 20px;
+//   flex-wrap: wrap;
+// `;
 
 const StyledImage = styled.img`
   width: 100%;
@@ -65,7 +65,7 @@ const StyledCardTitle = styled.h2`
 `;
 
 const Container = styled.div`
-  display: grid;
+  display: flex;
   flex-wrap: wrap;
   align-content: space-between;
   position: absolute;
@@ -132,7 +132,7 @@ export default function Homepage({
   return (
     <>
       <StyledHeader>plantWorld</StyledHeader>
-      <StyledList>
+      <Masonry columns={{ xs: 3, sm: 4 }} spacing={2}>
         {plants.map((plant) => (
           <PlantCard key={plant.id}>
             <Link href={`/plant-details/${plant.slug}`}>
@@ -155,7 +155,7 @@ export default function Homepage({
             </Link>
           </PlantCard>
         ))}
-      </StyledList>
+      </Masonry>
     </>
   );
 }
