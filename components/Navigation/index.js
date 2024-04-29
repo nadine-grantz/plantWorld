@@ -10,7 +10,7 @@ const DesktopNavbar = styled(BurgerNavigation)`
 
 const MobileNavbar = styled(HorizontalNavigation)`
   @media screen and (min-width: 500px) {
-    displax: none;
+    display: none;
   }
 `;
 

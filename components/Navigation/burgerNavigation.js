@@ -45,7 +45,7 @@ const ChangeBar3 = styled(Bar)`
   }
 `;
 
-export default function BurgerNavigation() {
+export default function BurgerNavigation({ className }) {
   const [isNavigationVisible, setVisibleNavigation] = useState(false);
 
   function toggleNavigation() {
@@ -58,7 +58,7 @@ export default function BurgerNavigation() {
 
   return (
     <>
-      <nav>
+      <nav className={className}>
         <Container onClick={toggleNavigation}>
           <ChangeBar1 $isOpen={isNavigationVisible} />
           <ChangeBar2 $isOpen={isNavigationVisible} />

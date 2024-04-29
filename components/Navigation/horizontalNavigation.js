@@ -1,7 +1,9 @@
 import Link from "next/link";
 import styled from "styled-components";
 
-const NavContainer = styled.nav`
+const NavContainer = styled.nav.attrs((props) => ({
+  className: props.className,
+}))`
   display: flex;
   justify-content: center;
   position: sticky;
@@ -17,9 +19,9 @@ const StyledLi = styled.li`
   margin: 0 10px;
 `;
 
-export default function HorizontalNavigation() {
+export default function HorizontalNavigation({ className }) {
   return (
-    <NavContainer>
+    <NavContainer className={className}>
       <MenuList>
         <StyledLi>
           <Link href="/">Home</Link>
