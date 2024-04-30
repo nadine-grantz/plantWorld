@@ -20,8 +20,8 @@ const PlantCard = styled.div`
     width: calc(50% - 10px);
   }
 
-  @media screen and (min-width: 1000px) {
-    width: calc(30% - 10px);
+  @media screen and (min-width: 900px) {
+    width: calc(30%);
   }
 `;
 
@@ -69,6 +69,13 @@ const PlantInfo = styled.p`
   margin: 0;
   display: flex;
   color: grey;
+
+  @media (max-width: 200px) {
+    font-size: xx-small;
+  }
+  @media (max-width: 400px) {
+    font-size: small;
+  }
 `;
 
 const PlantLevelLabel = styled(PlantInfo)``;
@@ -95,6 +102,20 @@ const StyledList = styled.ul`
   list-style: none;
   padding: 0;
 `;
+
+// const customBreakpoints = {
+//   values: {
+//     xs: 0,
+//     sm: 300,
+//     md: 600,
+//     lg: 960,
+//     xl: 1280,
+//     custom: 1600,
+//   },
+// };
+// const theme = createTheme({
+//   breakpoints: customBreakpoints,
+// });
 
 export default function Homepage({
   plants,
@@ -125,7 +146,7 @@ export default function Homepage({
     <>
       <StyledHeader>plantWorld</StyledHeader>
       <StyledList>
-        <Masonry columns={{ xs: 3, sm: 4 }} spacing={2}>
+        <Masonry>
           {plants.map((plant) => (
             <PlantCard key={plant.id}>
               <Link href={`/plant-details/${plant.slug}`}>
