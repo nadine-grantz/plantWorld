@@ -10,16 +10,10 @@ const StyledHeader = styled.h1`
   width: 100%;
   letter-spacing: 0.5rem;
   color: #0c140b;
-  // &:hover {
-  //   background: rgba(255, 255, 255, 0.8);
-  //   color: red;
-  // }
 `;
 
 const PlantCard = styled.div`
   position: relative;
-  border-radius: 10px;
-  height: fit-content;
   width: 100%;
 
   @media screen and (min-width: 700px) {
@@ -30,14 +24,6 @@ const PlantCard = styled.div`
     width: calc(30% - 10px);
   }
 `;
-
-// const StyledList = styled.div`
-//   padding: 0;
-//   list-style: none;
-//   display: flex;
-//   gap: 20px;
-//   flex-wrap: wrap;
-// `;
 
 const StyledImage = styled.img`
   width: 100%;
@@ -73,7 +59,6 @@ const Container = styled.div`
   width: 100%;
   top: 0;
   padding: 12px;
-  gap: 5px;
 `;
 
 const PlantInfo = styled.p`
@@ -104,6 +89,13 @@ const Label = styled.div`
   height: fit-content;
 `;
 
+const StyledList = styled.ul`
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+`;
+
 export default function Homepage({
   plants,
   setFavoritePlantsState,
@@ -132,30 +124,32 @@ export default function Homepage({
   return (
     <>
       <StyledHeader>plantWorld</StyledHeader>
-      <Masonry columns={{ xs: 3, sm: 4 }} spacing={2}>
-        {plants.map((plant) => (
-          <PlantCard key={plant.id}>
-            <Link href={`/plant-details/${plant.slug}`}>
-              <StyledImage src={plant.picture} alt={plant.title} />
-              <Container>
-                <DetailsLine>
-                  <Label>
-                    <PlantLevelLabel>{plant.level}</PlantLevelLabel>
-                    <PlantLocationLabel>{plant.place}</PlantLocationLabel>
-                  </Label>
-                  <StyledButton
-                    disabled={isPlantInFavoritePlants(plant)}
-                    onClick={(event) => onFavoriteButtonClick(event, plant)}
-                  >
-                    Favorite
-                  </StyledButton>
-                </DetailsLine>
-                <StyledCardTitle>{plant.title}</StyledCardTitle>
-              </Container>
-            </Link>
-          </PlantCard>
-        ))}
-      </Masonry>
+      <StyledList>
+        <Masonry columns={{ xs: 3, sm: 4 }} spacing={2}>
+          {plants.map((plant) => (
+            <PlantCard key={plant.id}>
+              <Link href={`/plant-details/${plant.slug}`}>
+                <StyledImage src={plant.picture} alt={plant.title} />
+                <Container>
+                  <DetailsLine>
+                    <Label>
+                      <PlantLevelLabel>{plant.level}</PlantLevelLabel>
+                      <PlantLocationLabel>{plant.place}</PlantLocationLabel>
+                    </Label>
+                    <StyledButton
+                      disabled={isPlantInFavoritePlants(plant)}
+                      onClick={(event) => onFavoriteButtonClick(event, plant)}
+                    >
+                      Favorite
+                    </StyledButton>
+                  </DetailsLine>
+                  <StyledCardTitle>{plant.title}</StyledCardTitle>
+                </Container>
+              </Link>
+            </PlantCard>
+          ))}
+        </Masonry>
+      </StyledList>
     </>
   );
 }
