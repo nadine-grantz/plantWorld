@@ -137,8 +137,9 @@ export default function Homepage({
                     <StyledButton
                       disabled={isPlantInFavoritePlants(plant)}
                       onClick={(event) => onFavoriteButtonClick(event, plant)}
+                      isFavorite={isPlantInFavoritePlants(plant)}
                     >
-                      Favorite
+                      {isPlantInFavoritePlants(plant) ? "Delete" : "Favorite"}
                     </StyledButton>
                   </DetailsLine>
                   <StyledCardTitle>{plant.title}</StyledCardTitle>
