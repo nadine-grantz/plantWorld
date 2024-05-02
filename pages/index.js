@@ -2,7 +2,6 @@ import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
 import Masonry from "@mui/lab/Masonry";
-import Masonry from "@mui/lab/Masonry";
 
 const StyledHeader = styled.h1`
   font-family: Moderne Sans, sans-serif;
@@ -70,13 +69,6 @@ const PlantInfo = styled.p`
   @media (max-width: 400px) {
     font-size: small;
   }
-
-  @media (max-width: 200px) {
-    font-size: xx-small;
-  }
-  @media (max-width: 400px) {
-    font-size: small;
-  }
 `;
 
 const PlantLevelLabel = styled(PlantInfo)``;
@@ -104,26 +96,6 @@ const StyledList = styled.ul`
   padding: 0;
 `;
 
-// const customBreakpoints = {
-//   values: {
-//     xs: 0,
-//     sm: 300,
-//     md: 600,
-//     lg: 960,
-//     xl: 1280,
-//     custom: 1600,
-//   },
-// };
-// const theme = createTheme({
-//   breakpoints: customBreakpoints,
-// });
-
-const StyledList = styled.ul`
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  padding: 0;
-`;
 export default function Homepage({
   plants,
   setFavoritePlantsState,
