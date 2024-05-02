@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
 import Masonry from "@mui/lab/Masonry";
+import Masonry from "@mui/lab/Masonry";
 
 const StyledHeader = styled.h1`
   font-family: Moderne Sans, sans-serif;
@@ -10,10 +11,6 @@ const StyledHeader = styled.h1`
   width: 100%;
   letter-spacing: 0.5rem;
   color: #0c140b;
-  // &:hover {
-  //   background: rgba(255, 255, 255, 0.8);
-  //   color: red;
-  // }
 `;
 
 const PlantCard = styled.li`
@@ -33,10 +30,11 @@ const StyledImage = styled.img`
 const StyledButton = styled.button`
   border: none;
   max-width: 100px;
-  background: #d36e70;
   border-radius: 5px;
   margin: 0;
   font-weight: 900;
+  background-color: ${(props) => (props.isFavorite ? "#374725" : "#d36e70")};
+  color: white;
 `;
 
 const StyledCardTitle = styled.h2`
@@ -47,7 +45,7 @@ const StyledCardTitle = styled.h2`
 `;
 
 const Container = styled.div`
-  display: grid;
+  display: flex;
   flex-wrap: wrap;
   align-content: space-between;
   position: absolute;
@@ -65,6 +63,13 @@ const PlantInfo = styled.p`
   margin: 0;
   display: flex;
   color: grey;
+
+  @media (max-width: 200px) {
+    font-size: xx-small;
+  }
+  @media (max-width: 400px) {
+    font-size: small;
+  }
 
   @media (max-width: 200px) {
     font-size: xx-small;
@@ -98,29 +103,48 @@ const StyledList = styled.ul`
   list-style: none;
   padding: 0;
 `;
+
+// const customBreakpoints = {
+//   values: {
+//     xs: 0,
+//     sm: 300,
+//     md: 600,
+//     lg: 960,
+//     xl: 1280,
+//     custom: 1600,
+//   },
+// };
+// const theme = createTheme({
+//   breakpoints: customBreakpoints,
+// });
+
+const StyledList = styled.ul`
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+`;
 export default function Homepage({
   plants,
   setFavoritePlantsState,
   favoritePlants,
 }) {
   function isPlantInFavoritePlants(plant) {
-    const isAlreadyFavorite = favoritePlants.some(
-      (favorite) => favorite.id === plant.id
-    );
-    return isAlreadyFavorite;
-  }
-
-  function handleAddFavoritePlant(maybeFavPlant) {
-    const isAlreadyFavorite = isPlantInFavoritePlants(maybeFavPlant);
-
-    if (!isAlreadyFavorite) {
-      setFavoritePlantsState([...favoritePlants, maybeFavPlant]);
-    }
+    return favoritePlants.some((favorite) => favorite.id === plant.id);
   }
 
   function onFavoriteButtonClick(event, plant) {
     event.preventDefault();
-    handleAddFavoritePlant(plant);
+    const isAlreadyFavorite = isPlantInFavoritePlants(plant);
+
+    if (isAlreadyFavorite) {
+      const updatedFavorites = favoritePlants.filter(
+        (favorite) => favorite.id !== plant.id
+      );
+      setFavoritePlantsState(updatedFavorites);
+    } else {
+      setFavoritePlantsState([...favoritePlants, plant]);
+    }
   }
 
   return (
