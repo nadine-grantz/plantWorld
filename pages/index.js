@@ -13,16 +13,8 @@ const StyledHeader = styled.h1`
 `;
 
 const PlantCard = styled.div`
+  min-width: 250px;
   position: relative;
-  width: 100%;
-
-  @media screen and (min-width: 700px) {
-    width: calc(50% - 10px);
-  }
-
-  @media screen and (min-width: 900px) {
-    width: calc(30%);
-  }
 `;
 
 const StyledImage = styled.img`
@@ -103,20 +95,6 @@ const StyledList = styled.ul`
   padding: 0;
 `;
 
-// const customBreakpoints = {
-//   values: {
-//     xs: 0,
-//     sm: 300,
-//     md: 600,
-//     lg: 960,
-//     xl: 1280,
-//     custom: 1600,
-//   },
-// };
-// const theme = createTheme({
-//   breakpoints: customBreakpoints,
-// });
-
 export default function Homepage({
   plants,
   setFavoritePlantsState,
@@ -146,7 +124,7 @@ export default function Homepage({
     <>
       <StyledHeader>plantWorld</StyledHeader>
       <StyledList>
-        <Masonry>
+        <Masonry columns={{ xs: 1, sm: 2, md: 3 }} spacing={2}>
           {plants.map((plant) => (
             <PlantCard key={plant.id}>
               <Link href={`/plant-details/${plant.slug}`}>
