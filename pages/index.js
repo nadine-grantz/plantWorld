@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import styled from "styled-components";
+import Masonry from "@mui/lab/Masonry";
 
 const StyledHeader = styled.h1`
   font-family: Moderne Sans, sans-serif;
@@ -9,33 +10,21 @@ const StyledHeader = styled.h1`
   width: 100%;
   letter-spacing: 0.5rem;
   color: #0c140b;
-  position: relative;
 `;
 
-const PlantCard = styled.li`
+const PlantCard = styled.div`
   position: relative;
-  border-radius: 10px;
-  height: fit-content;
   width: 100%;
 
   @media screen and (min-width: 500px) {
     width: calc(50% - 10px);
   }
 
-  @media screen and (min-width: 1000px) {
-    width: calc(30% - 10px);
+  @media screen and (min-width: 900px) {
+    width: calc(30%);
   }
 `;
 
-const StyledList = styled.ul`
-  padding: 0;
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 1rem;
-`;
 
 const StyledImage = styled.img`
   width: 100%;
@@ -64,7 +53,7 @@ const StyledCardTitle = styled.h2`
 `;
 
 const Container = styled.div`
-  display: grid;
+  display: flex;
   flex-wrap: wrap;
   align-content: space-between;
   position: absolute;
@@ -72,7 +61,6 @@ const Container = styled.div`
   width: 100%;
   top: 0;
   padding: 12px;
-  gap: 5px;
 `;
 
 const PlantInfo = styled.p`
@@ -83,6 +71,13 @@ const PlantInfo = styled.p`
   margin: 0;
   display: flex;
   color: grey;
+
+  @media (max-width: 200px) {
+    font-size: xx-small;
+  }
+  @media (max-width: 400px) {
+    font-size: small;
+  }
 `;
 
 const PlantLevelLabel = styled(PlantInfo)``;
@@ -102,6 +97,27 @@ const Label = styled.div`
   gap: 5px;
   height: fit-content;
 `;
+
+const StyledList = styled.ul`
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+`;
+
+// const customBreakpoints = {
+//   values: {
+//     xs: 0,
+//     sm: 300,
+//     md: 600,
+//     lg: 960,
+//     xl: 1280,
+//     custom: 1600,
+//   },
+// };
+// const theme = createTheme({
+//   breakpoints: customBreakpoints,
+// });
 
 export default function Homepage({
   plants,
@@ -130,28 +146,31 @@ export default function Homepage({
     <>
       <StyledHeader>plantWorld</StyledHeader>
       <StyledList>
-        {plants.map((plant) => (
-          <PlantCard key={plant.id}>
-            <Link href={`/plant-details/${plant.slug}`}>
-              <StyledImage src={plant.picture} alt={plant.title} />
-              <Container>
-                <DetailsLine>
-                  <Label>
-                    <PlantLevelLabel>{plant.level}</PlantLevelLabel>
-                    <PlantLocationLabel>{plant.place}</PlantLocationLabel>
-                  </Label>
-                  <StyledButton
-                    onClick={(event) => onFavoriteButtonClick(event, plant)}
-                    isFavorite={isPlantInFavoritePlants(plant)}
-                  >
-                    {isPlantInFavoritePlants(plant) ? "Delete" : "Favorite"}
-                  </StyledButton>
-                </DetailsLine>
-                <StyledCardTitle>{plant.title}</StyledCardTitle>
-              </Container>
-            </Link>
-          </PlantCard>
-        ))}
+        <Masonry>
+          {plants.map((plant) => (
+            <PlantCard key={plant.id}>
+              <Link href={`/plant-details/${plant.slug}`}>
+                <StyledImage src={plant.picture} alt={plant.title} />
+                <Container>
+                  <DetailsLine>
+                    <Label>
+                      <PlantLevelLabel>{plant.level}</PlantLevelLabel>
+                      <PlantLocationLabel>{plant.place}</PlantLocationLabel>
+                    </Label>
+                    <StyledButton
+                      disabled={isPlantInFavoritePlants(plant)}
+                      onClick={(event) => onFavoriteButtonClick(event, plant)}
+                    >
+                      Favorite
+                    </StyledButton>
+                  </DetailsLine>
+                  <StyledCardTitle>{plant.title}</StyledCardTitle>
+                </Container>
+              </Link>
+            </PlantCard>
+          ))}
+        </Masonry>
+
       </StyledList>
     </>
   );
