@@ -16,7 +16,7 @@ const PlantCard = styled.div`
   position: relative;
   width: 100%;
 
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: 500px) {
     width: calc(50% - 10px);
   }
 
@@ -24,6 +24,7 @@ const PlantCard = styled.div`
     width: calc(30%);
   }
 `;
+
 
 const StyledImage = styled.img`
   width: 100%;
@@ -37,10 +38,11 @@ const StyledImage = styled.img`
 const StyledButton = styled.button`
   border: none;
   max-width: 100px;
-  background: #d36e70;
   border-radius: 5px;
   margin: 0;
   font-weight: 900;
+  background-color: ${(props) => (props.isFavorite ? "#374725" : "#d36e70")};
+  color: white;
 `;
 
 const StyledCardTitle = styled.h2`
@@ -123,23 +125,21 @@ export default function Homepage({
   favoritePlants,
 }) {
   function isPlantInFavoritePlants(plant) {
-    const isAlreadyFavorite = favoritePlants.some(
-      (favorite) => favorite.id === plant.id
-    );
-    return isAlreadyFavorite;
-  }
-
-  function handleAddFavoritePlant(maybeFavPlant) {
-    const isAlreadyFavorite = isPlantInFavoritePlants(maybeFavPlant);
-
-    if (!isAlreadyFavorite) {
-      setFavoritePlantsState([...favoritePlants, maybeFavPlant]);
-    }
+    return favoritePlants.some((favorite) => favorite.id === plant.id);
   }
 
   function onFavoriteButtonClick(event, plant) {
     event.preventDefault();
-    handleAddFavoritePlant(plant);
+    const isAlreadyFavorite = isPlantInFavoritePlants(plant);
+
+    if (isAlreadyFavorite) {
+      const updatedFavorites = favoritePlants.filter(
+        (favorite) => favorite.id !== plant.id
+      );
+      setFavoritePlantsState(updatedFavorites);
+    } else {
+      setFavoritePlantsState([...favoritePlants, plant]);
+    }
   }
 
   return (
@@ -170,6 +170,7 @@ export default function Homepage({
             </PlantCard>
           ))}
         </Masonry>
+
       </StyledList>
     </>
   );
