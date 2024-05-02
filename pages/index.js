@@ -102,7 +102,18 @@ export default function Homepage({
   favoritePlants,
 }) {
   function isPlantInFavoritePlants(plant) {
-    return favoritePlants.some((favorite) => favorite.id === plant.id);
+    const isAlreadyFavorite = favoritePlants.some(
+      (favorite) => favorite.id === plant.id
+    );
+    return isAlreadyFavorite;
+  }
+
+  function handleAddFavoritePlant(maybeFavPlant) {
+    const isAlreadyFavorite = isPlantInFavoritePlants(maybeFavPlant);
+
+    if (!isAlreadyFavorite) {
+      setFavoritePlantsState([...favoritePlants, maybeFavPlant]);
+    }
   }
 
   function onFavoriteButtonClick(event, plant) {
