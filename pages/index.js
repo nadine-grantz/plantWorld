@@ -102,18 +102,7 @@ export default function Homepage({
   favoritePlants,
 }) {
   function isPlantInFavoritePlants(plant) {
-    const isAlreadyFavorite = favoritePlants.some(
-      (favorite) => favorite.id === plant.id
-    );
-    return isAlreadyFavorite;
-  }
-
-  function handleAddFavoritePlant(maybeFavPlant) {
-    const isAlreadyFavorite = isPlantInFavoritePlants(maybeFavPlant);
-
-    if (!isAlreadyFavorite) {
-      setFavoritePlantsState([...favoritePlants, maybeFavPlant]);
-    }
+    return favoritePlants.some((favorite) => favorite.id === plant.id);
   }
 
   function onFavoriteButtonClick(event, plant) {
@@ -148,8 +137,9 @@ export default function Homepage({
                     <StyledButton
                       disabled={isPlantInFavoritePlants(plant)}
                       onClick={(event) => onFavoriteButtonClick(event, plant)}
+                      isFavorite={isPlantInFavoritePlants(plant)}
                     >
-                      Favorite
+                      {isPlantInFavoritePlants(plant) ? "Delete" : "Favorite"}
                     </StyledButton>
                   </DetailsLine>
                   <StyledCardTitle>{plant.title}</StyledCardTitle>
