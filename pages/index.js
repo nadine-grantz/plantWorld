@@ -110,13 +110,6 @@ const Label = styled.div`
   height: fit-content;
 `;
 
-const StyledList = styled.ul`
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  padding: 0;
-`;
-
 export default function Homepage({
   plants,
   setFavoritePlantsState,
