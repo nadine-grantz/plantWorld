@@ -7,3 +7,9 @@ But what if you can't find your specific plant in my database? Fear not! PlantWo
 I understand that your plants are more than just decorations; they're a reflection of your green passion. That's why PlantWorld isn't just an app - your botanical journey and elevates your passion for plant care to new heights.
 
 Welcome to PlantWorld, where your love for plants meets the power of technology.
+
+---
+
+Deploy on Vercel
+
+The easiest way to deploy the Next.js app is to use the Vercel Platform.
