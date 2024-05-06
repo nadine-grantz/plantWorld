@@ -3,7 +3,6 @@ import styled from "styled-components";
 import Link from "next/link";
 
 const Container = styled.div`
-  display: inline-block;
   cursor: pointer;
 `;
 
@@ -15,21 +14,38 @@ const Bar = styled.div`
   transition: 0.4s;
 `;
 
+const StyledUl = styled.ul`
+  @media screen and (max-width: 800px) {
+    display: flex;
+    list-style: none;
+  }
+`;
+
+const StyledLi = styled.li`
+  list-style: none;
+`;
+
 const ChangeBar1 = styled(Bar)`
   transform: ${({ $isOpen }) =>
     $isOpen ? "translate(0, 11px) rotate(-45deg)" : "none"};
+ 
+  }
 `;
 
 const ChangeBar2 = styled(Bar)`
   opacity: ${({ $isOpen }) => ($isOpen ? "0" : "1")};
+ 
+  }
 `;
 
 const ChangeBar3 = styled(Bar)`
   transform: ${({ $isOpen }) =>
     $isOpen ? "translate(0, -11px) rotate(45deg)" : "none"};
+
+  }
 `;
 
-export default function Navigation() {
+export default function BurgerNavigation({ className }) {
   const [isNavigationVisible, setVisibleNavigation] = useState(false);
 
   function toggleNavigation() {
@@ -42,32 +58,32 @@ export default function Navigation() {
 
   return (
     <>
-      <nav>
+      <nav className={className}>
         <Container onClick={toggleNavigation}>
           <ChangeBar1 $isOpen={isNavigationVisible} />
           <ChangeBar2 $isOpen={isNavigationVisible} />
           <ChangeBar3 $isOpen={isNavigationVisible} />
         </Container>
         {isNavigationVisible && (
-          <ul>
-            <li>
+          <StyledUl>
+            <StyledLi>
               <Link href="/" onClick={handleLinkClick}>
                 Home
               </Link>
-            </li>
+            </StyledLi>
 
-            <li>
+            <StyledLi>
               <Link href="/add-own-plant" onClick={handleLinkClick}>
                 Add my own Plant
               </Link>
-            </li>
+            </StyledLi>
 
-            <li>
+            <StyledLi>
               <Link href="/my-favorite-plants" onClick={handleLinkClick}>
                 My favorite Plant
               </Link>
-            </li>
-          </ul>
+            </StyledLi>
+          </StyledUl>
         )}
       </nav>
     </>

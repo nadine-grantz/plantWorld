@@ -15,6 +15,27 @@ const StyledHeader = styled.h1`
 const PlantCard = styled.li`
   min-width: 250px;
   position: relative;
+  border-radius: 10px;
+  height: fit-content;
+  width: 100%;
+
+  @media screen and (min-width: 500px) {
+    width: calc(50% - 10px);
+  }
+
+  @media screen and (min-width: 1000px) {
+    width: calc(30% - 10px);
+  }
+`;
+
+const StyledList = styled.ul`
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 1rem;
 `;
 
 const StyledImage = styled.img`

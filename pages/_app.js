@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Navigation from "@/components/Navigation/navigation";
+import Navigation from "@/components/Navigation";
 import plantsData from "../lib/plants.json";
 import GlobalStyles from "@/styles";
 
