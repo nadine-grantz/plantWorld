@@ -79,7 +79,7 @@ export default function AddOwnPlant({ plants, setPlantsState }) {
             id="title"
             name="title"
             required
-            placeholder="Pet's name"
+            placeholder="Plants name"
           />
 
           <StyledLabel htmlFor="description">Description</StyledLabel>
