@@ -10,6 +10,7 @@ const StyledHeader = styled.h1`
   width: 100%;
   letter-spacing: 0.5rem;
   color: #0c140b;
+  position: relative;
 `;
 
 const PlantCard = styled.li`
@@ -138,7 +139,6 @@ export default function Homepage({
                       <PlantLocationLabel>{plant.place}</PlantLocationLabel>
                     </Label>
                     <StyledButton
-                      disabled={isPlantInFavoritePlants(plant)}
                       onClick={(event) => onFavoriteButtonClick(event, plant)}
                       isFavorite={isPlantInFavoritePlants(plant)}
                     >
