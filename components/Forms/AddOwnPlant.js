@@ -1,56 +1,79 @@
+import React, { useState } from "react";
 import styled from "styled-components";
 import { uid } from "uid";
 
 const StyledForm = styled.form`
   display: grid;
-  gap: 1rem;
+  gap: 1.5rem;
   max-width: 400px;
   margin: auto;
 `;
 
 const StyledInput = styled.input`
-  padding: 0.7rem;
+  padding: 0.75rem;
   border: none;
   border-radius: 8px;
-  background-color: #fff;
+  background-color: #f4f4f9;
   width: 100%;
-  color: #6a6f8c;
+  color: #333;
   font-family: "Open Sans", sans-serif;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
 `;
 
 const StyledLabel = styled.label`
   font-weight: bold;
-  color: #aaa;
+  color: #555;
+  margin-bottom: 0.5rem;
 `;
 
 const StyledButton = styled.button`
   border: none;
   width: 100%;
-  padding: 0.7rem;
+  padding: 0.75rem;
   border-radius: 8px;
   cursor: pointer;
-  background-color: #ff6b81;
-  color: green;
-  transition: background-color 0.3s ease;
+  background-color: #013220;
+  color: #fff;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    background-color: #8b0000;
+    transform: translateY(-2px);
+  }
 `;
 
 const StyledHeading = styled.h1`
   text-align: center;
-  margin-bottom: 1.5rem;
-  color: #6a6f8c;
+  margin-bottom: 2rem;
+  color: #333;
+  font-family: "Roboto", sans-serif;
 `;
 
 const Wrapper = styled.div`
-  max-width: 300px;
+  max-width: 400px;
   margin: auto;
   padding: 2rem;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: #c8c8c8;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+`;
+
+const SuccessMessage = styled.p`
+  text-align: center;
+  color: green;
+  margin-top: 1rem;
 `;
 
 export default function AddOwnPlant({ plants, setPlantsState }) {
-  // Helper function, damit Leerzeichen ersetzt werden + lowercase
+  const [showSuccess, setShowSuccess] = useState(false);
+
   function createNewSlugForOwnPlant(title) {
     return title.toLowerCase().replace(/\s+/g, "-");
   }
@@ -59,13 +82,10 @@ export default function AddOwnPlant({ plants, setPlantsState }) {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
     const newPlant = Object.fromEntries(formData);
-    // Title wird in Slug umgewandelt
     const slug = createNewSlugForOwnPlant(newPlant.title);
-    // const plantWithSlug = { ...newPlant, slug };
-    console.log("newPlant: ", newPlant);
     setPlantsState([...plants, { id: uid(), ...newPlant, slug }]);
-    // setPlantsState([...plants, plantWithSlug]);
-    // console.log("plants: ", plants);
+    setShowSuccess(true);
+    event.currentTarget.reset();
   }
 
   return (
@@ -79,7 +99,7 @@ export default function AddOwnPlant({ plants, setPlantsState }) {
             id="title"
             name="title"
             required
-            placeholder="Plants name"
+            placeholder="Plant's name"
           />
 
           <StyledLabel htmlFor="description">Description</StyledLabel>
@@ -120,6 +140,9 @@ export default function AddOwnPlant({ plants, setPlantsState }) {
           <StyledButton type="submit">Save Plant</StyledButton>
           <StyledButton type="button">Cancel</StyledButton>
         </StyledForm>
+        {showSuccess && (
+          <SuccessMessage>Plant successfully added!</SuccessMessage>
+        )}
       </Wrapper>
     </>
   );
