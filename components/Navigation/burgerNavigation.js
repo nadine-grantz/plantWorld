@@ -23,11 +23,11 @@ const StyledUl = styled.ul`
   top: 60px;
   left: 0;
   right: 0;
-  background: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin: 0;
   padding: 20px 0;
   z-index: 999;
+  background-color: rgba(255, 255, 255, 0.9);
 `;
 
 const StyledLi = styled.li`
@@ -40,12 +40,6 @@ const StyledLink = styled(Link)`
   font-weight: bold;
   padding: 10px 15px;
   transition: color 0.3s ease, background-color 0.3s ease;
-
-  &:hover {
-    color: #00796b;
-    background-color: #f0f0f0;
-    border-radius: 5px;
-  }
 `;
 
 const ChangeBar1 = styled(Bar)`

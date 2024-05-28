@@ -31,12 +31,6 @@ const StyledLink = styled(Link)`
   font-weight: bold;
   padding: 10px 15px;
   transition: color 0.3s ease, background-color 0.3s ease;
-
-  &:hover {
-    color: #00796b;
-    background-color: #f0f0f0;
-    border-radius: 5px;
-  }
 `;
 
 export default function HorizontalNavigation({ className }) {

@@ -4,13 +4,13 @@ import HorizontalNavigation from "./horizontalNavigation";
 
 const MobileNavbar = styled(BurgerNavigation)`
   @media screen and (min-width: 500px) {
-    display: none;
+    display: none !important;
   }
 `;
 
 const DesktopNavbar = styled(HorizontalNavigation)`
   @media screen and (max-width: 499px) {
-    display: none;
+    display: none !important;
   }
 `;
 
