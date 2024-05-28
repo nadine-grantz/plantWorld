@@ -68,17 +68,27 @@ export default function PlantDetails({ plant }) {
   } = plant;
 
   return (
-    <>
-      <h1>{title}</h1>
-      <ul>
-        <li>{description}</li>
-        <li>{location}</li>
-        <li>{watering}</li>
-        <li>{care}</li>
-        <li>{place}</li>
-        <li>{level}</li>
-        <img src={picture} alt={title} width={100} height={149} />
-      </ul>
-    </>
+    <Container>
+      <Title>{title}</Title>
+      <List>
+        <ListItem>
+          <Icon icon={faSun} /> {location}
+        </ListItem>
+        <ListItem>
+          <Icon icon={faTint} /> {watering}
+        </ListItem>
+        <ListItem>
+          <Icon icon={faLeaf} /> {care}
+        </ListItem>
+        <ListItem>
+          <Icon icon={faHome} /> {place}
+        </ListItem>
+        <ListItem>
+          <Icon icon={faChartLine} /> {level}
+        </ListItem>
+        <ListItem>{description}</ListItem>
+      </List>
+      <Image src={picture} alt={title} />
+    </Container>
   );
 }
