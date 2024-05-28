@@ -27,8 +27,8 @@ const StyledUl = styled.ul`
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin: 0;
   padding: 20px 0;
-  z-index: 999;
-  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 1;
+  background-color: rgba(143, 188, 143, 0.9);
 `;
 
 const StyledLi = styled.li`
