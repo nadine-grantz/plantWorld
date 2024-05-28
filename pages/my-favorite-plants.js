@@ -54,10 +54,13 @@ const RemoveButton = styled.button`
   color: #fff;
   border: none;
   border-radius: 4px;
-  padding: 10px 20px;
+  padding: 10px;
   font-size: 1em;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   &:hover {
     background-color: #c0392b;
   }
@@ -73,9 +76,10 @@ export default function MyFavoritePlants({
     );
     setFavoritePlantsState(updatedFavorites);
   }
+
   return (
     <Container>
-      <Title>My Favorite Plants </Title>
+      <Title>My Favorite Plants</Title>
       <PlantList>
         {favoritePlants.map((plant) => (
           <PlantItem key={plant.id}>
@@ -88,7 +92,7 @@ export default function MyFavoritePlants({
                 alt={plant.title}
               />
             </Link>
-            <RemoveButton onClick={(event) => removeFromFavorites(plant)}>
+            <RemoveButton onClick={() => removeFromFavorites(plant)}>
               <FontAwesomeIcon icon={faTrash} />
             </RemoveButton>
           </PlantItem>
