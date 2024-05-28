@@ -33,6 +33,7 @@ const PlantItem = styled.li`
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 15px;
   text-align: center;
+  position: relative;
 `;
 
 const PlantTitle = styled.h2`
@@ -50,20 +51,16 @@ const PlantImage = styled.img`
 `;
 
 const RemoveButton = styled.button`
-  background: #e74c3c;
-  color: #fff;
+  background: #2f4f4f;
+  color: white;
   border: none;
   border-radius: 4px;
   padding: 10px;
   font-size: 1em;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  &:hover {
-    background-color: #c0392b;
-  }
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
 `;
 
 export default function MyFavoritePlants({
