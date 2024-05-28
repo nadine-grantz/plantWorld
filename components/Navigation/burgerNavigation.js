@@ -4,6 +4,7 @@ import Link from "next/link";
 
 const Container = styled.div`
   cursor: pointer;
+  padding: 1rem;
 `;
 
 const Bar = styled.div`
