@@ -74,6 +74,14 @@ const SuccessMessage = styled.p`
 export default function AddOwnPlant({ plants, setPlantsState }) {
   const [showSuccess, setShowSuccess] = useState(false);
 
+  const defaultPlantImages = [
+    "https://www.feey-pflanzen.de/cdn/shop/files/Caladiumrosebudaction_720x.jpg?v=1714744666",
+    "https://www.feey-pflanzen.de/cdn/shop/files/CaladiumrosebudWohnzimmer_720x.jpg?v=1717149002",
+    "https://www.feey-pflanzen.de/cdn/shop/files/Caladiummissmuffetaction_720x.jpg?v=1714744802",
+    "https://www.feey-pflanzen.de/cdn/shop/files/BabytrioCaladium_PurpleLight_action_1800x1800.jpg?v=1714744911",
+    "https://www.feey-pflanzen.de/cdn/shop/files/Baby-Caladium-_Purple-Light_-cermer_1800x1800.gif?v=1717148770",
+  ];
+
   function createNewSlugForOwnPlant(title) {
     return title.toLowerCase().replace(/\s+/g, "-");
   }
@@ -82,6 +90,12 @@ export default function AddOwnPlant({ plants, setPlantsState }) {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
     const newPlant = Object.fromEntries(formData);
+
+    if (!newPlant.picture) {
+      const randomIndex = Math.floor(Math.random() * defaultPlantImages.length);
+      newPlant.picture = defaultPlantImages[randomIndex];
+    }
+
     const slug = createNewSlugForOwnPlant(newPlant.title);
     setPlantsState([...plants, { id: uid(), ...newPlant, slug }]);
     setShowSuccess(true);
