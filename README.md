@@ -13,3 +13,4 @@ Welcome to PlantWorld, where your love for plants meets the power of technology.
 Deploy on Vercel
 
 The easiest way to deploy the Next.js app is to use the Vercel Platform.
+foo
