@@ -14,7 +14,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const Container = styled.div`
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
   background-color: #f9f9f9;
@@ -27,6 +27,25 @@ const Title = styled.h1`
   color: #333;
   text-align: center;
   margin-bottom: 20px;
+`;
+
+const ContentWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 750px) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+`;
+
+const Details = styled.div`
+  flex: 1;
+  padding-right: 20px;
+
+  @media (min-width: 750px) {
+    padding-right: 40px;
+  }
 `;
 
 const List = styled.ul`
@@ -47,12 +66,25 @@ const Icon = styled(FontAwesomeIcon)`
   color: #00796b;
 `;
 
+const ImageWrapper = styled.div`
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
 const Image = styled.img`
-  display: block;
   max-width: 100%;
   height: auto;
   border-radius: 8px;
-  margin: 20px 0;
+
+  @media (min-width: 768px) {
+    max-width: 80%;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 60%;
+  }
 `;
 
 export default function PlantDetails({ plant }) {
@@ -70,25 +102,31 @@ export default function PlantDetails({ plant }) {
   return (
     <Container>
       <Title>{title}</Title>
-      <List>
-        <ListItem>
-          <Icon icon={faSun} /> {location}
-        </ListItem>
-        <ListItem>
-          <Icon icon={faTint} /> {watering}
-        </ListItem>
-        <ListItem>
-          <Icon icon={faLeaf} /> {care}
-        </ListItem>
-        <ListItem>
-          <Icon icon={faHome} /> {place}
-        </ListItem>
-        <ListItem>
-          <Icon icon={faChartLine} /> {level}
-        </ListItem>
-        <ListItem>{description}</ListItem>
-      </List>
-      <Image src={picture} alt={title} />
+      <ContentWrapper>
+        <Details>
+          <List>
+            <ListItem>
+              <Icon icon={faSun} /> {location}
+            </ListItem>
+            <ListItem>
+              <Icon icon={faTint} /> {watering}
+            </ListItem>
+            <ListItem>
+              <Icon icon={faLeaf} /> {care}
+            </ListItem>
+            <ListItem>
+              <Icon icon={faHome} /> {place}
+            </ListItem>
+            <ListItem>
+              <Icon icon={faChartLine} /> {level}
+            </ListItem>
+            <ListItem>{description}</ListItem>
+          </List>
+        </Details>
+        <ImageWrapper>
+          <Image src={picture} alt={title} />
+        </ImageWrapper>
+      </ContentWrapper>
     </Container>
   );
 }
