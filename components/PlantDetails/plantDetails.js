@@ -15,7 +15,7 @@ import {
 
 const Container = styled.div`
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 1rem;
   padding: 20px;
   background-color: #f9f9f9;
   border-radius: 8px;
