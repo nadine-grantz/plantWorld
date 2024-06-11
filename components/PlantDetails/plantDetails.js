@@ -2,20 +2,17 @@ import React from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faMapMarkerAlt,
   faTint,
-  faHandsHelping,
   faHome,
-  faLevelUpAlt,
   faSun,
   faLeaf,
-  faSeedling,
   faChartLine,
 } from "@fortawesome/free-solid-svg-icons";
 
 const Container = styled.div`
   max-width: 1200px;
-  margin: 1rem;
+  margin: 0 auto;
+  margin-top: 1rem;
   padding: 20px;
   background-color: #f9f9f9;
   border-radius: 8px;
@@ -33,7 +30,7 @@ const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media (min-width: 750px) {
+  @media (min-width: 768px) {
     flex-direction: row;
     align-items: flex-start;
   }
@@ -43,7 +40,7 @@ const Details = styled.div`
   flex: 1;
   padding-right: 20px;
 
-  @media (min-width: 750px) {
+  @media (min-width: 768px) {
     padding-right: 40px;
   }
 `;
