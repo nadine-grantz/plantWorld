@@ -117,12 +117,21 @@ export default function AddOwnPlant({ plants, setPlantsState }) {
           />
 
           <div>
+            <p>Log in a Level for you plant</p>
             <input type="radio" id="level" name="level" required></input>
             <StyledLabel htmlFor="level">Beginner</StyledLabel>
             <input type="radio" id="level" name="level" required></input>
             <StyledLabel htmlFor="level">Intermediate</StyledLabel>
             <input type="radio" id="level" name="level" required></input>
             <StyledLabel htmlFor="level">advanced</StyledLabel>
+          </div>
+
+          <div>
+            <p>Log in a Place</p>
+            <input type="radio" id="level" name="level" required></input>
+            <StyledLabel htmlFor="level">Sunny</StyledLabel>
+            <input type="radio" id="level" name="level" required></input>
+            <StyledLabel htmlFor="level">Half Shadow</StyledLabel>
           </div>
 
           <StyledLabel htmlFor="description">Description</StyledLabel>
