@@ -116,6 +116,15 @@ export default function AddOwnPlant({ plants, setPlantsState }) {
             placeholder="Plant's name"
           />
 
+          <div>
+            <input type="radio" id="level" name="level" required></input>
+            <StyledLabel htmlFor="level">Beginner</StyledLabel>
+            <input type="radio" id="level" name="level" required></input>
+            <StyledLabel htmlFor="level">Intermediate</StyledLabel>
+            <input type="radio" id="level" name="level" required></input>
+            <StyledLabel htmlFor="level">advanced</StyledLabel>
+          </div>
+
           <StyledLabel htmlFor="description">Description</StyledLabel>
           <StyledInput
             type="text"
